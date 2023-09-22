@@ -1,2798 +1,2797 @@
 {
-    "id": "freeCodeCamp/learn-bash-scripting-by-building-five-programs:v1.0.0",
-    "version": "1.0.3",
-    "summary": {
-      "title": "Learn Bash Scripting by Building Five Programs",
-      "description": "> Welcome to the Bash Scripting lessons!"
-    },
-    "config": {
-      "setup": {
-        "commands": [
-          "./.freeCodeCamp/setup.sh",
-          "cd .freeCodeCamp && npm install"
-        ],
-        "commits": [
-          "a3b35ff93b168a3f926ecff745cdfe9e6016e726"
-        ]
-      },
-      "testRunner": {
-        "command": "npm run programmatic-test",
-        "args": {
-          "tap": "--reporter=mocha-tap-reporter"
-        },
-        "directory": ".freeCodeCamp"
-      },
-      "repo": {
-        "uri": "https://github.com/freeCodeCamp/learn-bash-scripting-by-building-five-programs",
-        "branch": "v1.0.3"
-      },
-      "continue": {
-        "commands": [
-          "./.freeCodeCamp/setup.sh",
-          "./.freeCodeCamp/reset.sh"
-        ]
-      },
-      "reset": {
-        "commands": [
-          "./.freeCodeCamp/setup.sh",
-          "./.freeCodeCamp/reset.sh"
-        ]
-      },
-      "dependencies": [
-        {
-          "name": "node",
-          "version": ">=10"
-        }
+  "id": "freeCodeCamp/learn-bash-scripting-by-building-five-programs:v1.0.0",
+  "version": "1.0.3",
+  "summary": {
+    "title": "Learn Bash Scripting by Building Five Programs",
+    "description": "> Welcome to the Bash Scripting lessons!"
+  },
+  "config": {
+    "setup": {
+      "commands": [
+        "./.freeCodeCamp/setup.sh",
+        "cd .freeCodeCamp && npm install"
       ],
-      "webhook": {
-        "url": "https://api.freecodecamp.org/coderoad-challenge-completed",
-        "events": {
-          "init": false,
-          "reset": false,
-          "step_complete": false,
-          "level_complete": false,
-          "tutorial_complete": true
-        }
-      }
+      "commits": [
+        "a3b35ff93b168a3f926ecff745cdfe9e6016e726"
+      ]
     },
-    "levels": [
-      {
-        "id": "780",
-        "title": "touch bingo.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "780.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "d89177fe677a7650177c7c326654f3c4410005e8"
-              ]
-            },
-            "content": "I think the countdown timer is finished. Feel free to try it with some other arguments. The next one is a bingo number generator. Use `touch` to create `bingo.sh` in the same folder as the others.",
-            "hints": [
-              "Type `touch bingo.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "790",
-        "title": "chmod +x bingo.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "790.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "f61cc3025bc4e0920561490287e1ec541d1838ae"
-              ]
-            },
-            "content": "Give your file executable permissions like you did for the other two.",
-            "hints": [
-              "Use the `chmod` command with the `+x` flag",
-              "Here's an example `chmod <permissions> <filename>`",
-              "You previously used `chmod +x countdown.sh`",
-              "Type `chmod +x bingo.sh` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "800",
-        "title": "Add shebang",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "800.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "e573fb6dfcb5a1b0e141e6151e4e45d042df910a"
-              ]
-            },
-            "content": "Add a `shebang` at the top of your new script. It should use `bash` again like other two.",
-            "hints": [
-              "A `shebang` looks like this: `#!<path_to_interpreter>`",
-              "Enter `which bash` in the terminal to see the path to `bash`",
-              "Look at the `shebang` in one of your other scripts to get the syntax",
-              "It should look like this: `#!/bin/bash`",
-              "Add `#!/bin/bash` at the top of your `bingo.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "810",
-        "title": "Add comment",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "810.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "b002044531bfa79a8ac8039eaba2218b9d145227"
-              ]
-            },
-            "content": "Add a comment below the `shebang` that says, `Bingo Number Generator`.",
-            "hints": [
-              "Comments look like this: `# <comment>`",
-              "Add `#Bingo Number Generator` below the `shebang`",
-              "Capitalization matters"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "815",
-        "title": "Add echo -e \"title\"",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "815.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "f6812255da0c59042b983ca7f3c8f74a508df997"
-              ]
-            },
-            "content": "Before I forget, use a single `echo` command to print a title for this program. It should say `~~ Bingo Number Generator ~~` with an empty line before and after it.",
-            "hints": [
-              "Use the `echo` command with the `-e` flag and the new line (`\\n`) character",
-              "Don't forget the double quotes when using a new line character",
-              "Take a look at one of the title's from a previous file for a hint",
-              "Here's an example: `echo -e \"\\n<message>\\n\"`",
-              "You previously used `echo -e \"\\n~~ Countdown Timer ~~\\n\"`",
-              "Add `echo -e \"\\n~~ Bingo Number Generator ~~\\n\"` below the comment of your `bingo.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "817",
-        "title": "Add NUMBER=5 variable",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "817.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "160620276d33b3722515c0762d530d5c42c97688"
-              ]
-            },
-            "content": "In your script, create a `NUMBER` variable that equals `5`.",
-            "hints": [
-              "Here's an example: `VARIABLE_NAME=VALUE`",
-              "Add `NUMBER=5` to the bottom of your `bingo.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "818",
-        "title": "echo $NUMBER",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "818.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "ccb0cf40e80055da4b9c0c19524d1b28c3f22967"
-              ]
-            },
-            "content": "Below your new variable, use `echo` to print it to the screen.",
-            "hints": [
-              "Here's an example: `echo $<variable>`",
-              "Use `NUMBER` in place of `<variable>`",
-              "Add `echo $NUMBER` at the bottom of your `bingo.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "819",
-        "title": "./bingo.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "819.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "a23baafcf824c0a00f78d9c80f13a5fef0f5ed1f"
-              ]
-            },
-            "content": "Run the script by executing it.",
-            "hints": [
-              "Type `./bingo.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "820",
-        "title": "printenv",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "820.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "4b991456b6b313d4eef4c3df32397d64d7351615"
-              ]
-            },
-            "content": "The numbers in bingo go up to 75, each number has a letter from the word `bingo` associated with it. You will need to randomly generate a number between 1 and 75. Bash may have something that can help you here. A shell comes with environment variables. View them by entering `printenv` in the terminal.",
-            "hints": [
-              "Type `printenv` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "822",
-        "title": "echo $LANG",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "822.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "8b88190537d0e32fcf22087d77170384c1d0ac7a"
-              ]
-            },
-            "content": "These are all environment variables, they are predefined and loaded with each shell. Most of them aren’t very relevant, but it’s nice to know they’re there. One of them is `LANG`. Use `echo` to print it in the terminal.",
-            "hints": [
-              "Here's an example: `echo $<variable>`",
-              "Type `echo $LANG` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "824",
-        "title": "declare -p",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "824.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "76f6ad3ce9b03576a7e2fb151bbcd963915f5d1f"
-              ]
-            },
-            "content": "View all variables in the shell with `declare -p`. `-p` stands for `print`",
-            "hints": [
-              "Type `declare -p` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "826",
-        "title": "echo $RANDOM",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "826.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "3f9c3a33ea27f3074d1e4a0d088a1f66b71f556a"
-              ]
-            },
-            "content": "This list includes all the environment variables, and any others that may have been created in the current shell. There's one named `RANDOM`. Use `echo` to print it in the terminal.",
-            "hints": [
-              "Here's an example: `echo $<variable>`",
-              "Type `echo $RANDOM` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "828",
-        "title": "Change to NUMBER=$RANDOM",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "828.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "2ad4aab3547a50b9a60cc8212545f170c481f576"
-              ]
-            },
-            "content": "Back in your script, use the `RANDOM` variable to set `NUMBER` to a random number instead of `5`.",
-            "hints": [
-              "Change `NUMBER=5` to `NUMBER=$RANDOM`"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "830",
-        "title": "./bingo.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "830.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "184730555401d1d6e8494f641fe639f4911bd2f8"
-              ]
-            },
-            "content": "Run the script a few times in a row to make sure it's working.",
-            "hints": [
-              "Type `./bingo.sh` in the terminal and press enter two times in a row",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "835",
-        "title": "Change to NUMBER=$RANDOM%75",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "835.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "c3685d7faddecb97eb9b574cbb11dddb1df3e5e6"
-              ]
-            },
-            "content": "The `RANDOM` variable will generate a random number between 0 and 32767. You can use the `modulus` operator to make it in the range you want. In your script, change the `NUMBER` variable to `$RANDOM%75`.",
-            "hints": [
-              "Change `NUMBER=$RANDOM` to `NUMBER=$RANDOM%75`"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "840",
-        "title": "./bingo.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "840.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "d00258bd766abaecc0f3e3598e0b6923cacbcbd9"
-              ]
-            },
-            "content": "Run the script again.",
-            "hints": [
-              "Type `./bingo.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "881",
-        "title": "I=0",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "881.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "233e6a95b97dae139700569b50bec1bfb6096754"
-              ]
-            },
-            "content": "Bash sees everything as a string so it just printed the `%75` part literally. In the terminal, create an `I` variable equal to `0` (zero), so you can play with it and figure out how to do some calculations.",
-            "hints": [
-              "Type `I=0` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "884",
-        "title": "echo $I",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "884.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "eb0e3f5a823b316a19c367bd2abce6bdeea6634d"
-              ]
-            },
-            "content": "In the terminal, use `echo` to print your new variable.",
-            "hints": [
-              "Here's an example: `echo $<variable>`",
-              "Type `echo $I` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "887",
-        "title": "(( I++ ))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "887.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "7a309d0fd6aa04f7fcf814af9c6dae14283ce4d5"
-              ]
-            },
-            "content": "I noticed that you used double parenthesis in the `while` loop of your countdown timer to subtract one from `I`. Type `(( I++ ))` in the terminal to see if anything happens.",
-            "hints": [
-              "Type `(( I++ ))` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "890",
-        "title": "echo $I",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "890.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "2e8809b0dfa9cb8aa605ffff20711d2039623e1b"
-              ]
-            },
-            "content": "There was no output. Use `echo` to print `I` in the terminal again.",
-            "hints": [
-              "Type `echo $I` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "891",
-        "title": "help let",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "891.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "50a90b236855352b803b4667190fa1ec1e1a6749"
-              ]
-            },
-            "content": "The double parenthesis performed the calculation, changing the value of `I` from `0` to `1`. Enter `help let` in the terminal to see the operators you can use with the double parenthesis.",
-            "hints": [
-              "Type `help let` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "893",
-        "title": "(( I += 10 ))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "893.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "8b444bc1fdcf793c0f91b9c86319e28c08cd79a0"
-              ]
-            },
-            "content": "You used several of these now, including in the `for` loop from the countdown timer. Enter `(( I += 10 ))` in the terminal to increment `I` by `10`. Note that you don't need to prepend variables with `$` inside these parenthesis.",
-            "hints": [
-              "Type `(( I += 10 ))` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "896",
-        "title": "echo $I",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "896.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "ed7724678c7a49033997c071bed6ee2ec78132a2"
-              ]
-            },
-            "content": "Use `echo` to print your `I` variable again.",
-            "hints": [
-              "Type `echo $I` in the terminal and press enter."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "897",
-        "title": "$(( I + 4 ))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "897.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "c896e1f65a1c1043997533b04a251db6fd71f3d0"
-              ]
-            },
-            "content": "It should have printed `11` for the value of `I`. Using the double parenthesis like you have been is good for changing variable values or making comparisons. It makes the calculation in place and provides no output. If you want to make a calculation and do something with the result, add a `$` in front like this: `$(( ... ))`. Type `$(( I + 4 ))` in the terminal to see what happens.",
-            "hints": [
-              "If it didn't print `11` for `I`, enter `I=11` to set it to `11`",
-              "Type `$(( I + 4 ))` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "899",
-        "title": "echo $(( I + 4 ))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "899.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "f4bcdfe25fe6643122f5c2f8dc7ce461ff0a635c"
-              ]
-            },
-            "content": "It should say, `bash: 15: command not found`. It replaced the command with the result of the calculation. Effectively, trying to run `15` as a command. Enter the same command, but put `echo` in front of it. The command was `$(( I + 4 ))`",
-            "hints": [
-              "Type `echo $(( I + 4 ))` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "902",
-        "title": "echo $I",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "902.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "e079f61f37cfffa7125344243b8afaca67dc3eaf"
-              ]
-            },
-            "content": "Again, it replaced the calculation with the result. So it was basically the same as if you entered `echo 15`. Use `echo` to print `I` to the screen again.",
-            "hints": [
-              "Type `echo $I` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "905",
-        "title": "J=$(( I - 6 ))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "905.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "1585768954a03006e8dfa1e8f58c4fb202dcf11c"
-              ]
-            },
-            "content": "It should still have printed `11` for `I`. See the hints if it didn't. These double parenthesis with a `$` are how you can assign a variable to some calculation. In the terminal, create a `J` variable, and use the `$(( ... ))` syntax to set its value to `I - 6`.",
-            "hints": [
-              "If it didn't print `11` for `I`, enter `I=11` to set it to `11`",
-              "Type `J=$(( I - 6 ))` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "908",
-        "title": "echo $J",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "908.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "6cc5d6838bea782b736cbae0ae31af17704699be"
-              ]
-            },
-            "content": "Use `echo` to print `J`.",
-            "hints": [
-              "Here's an example: `echo $<variable>`",
-              "Type `echo $J` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "911",
-        "title": "echo $(( J * 5 + 25 ))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "911.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "cf1643cfcef7584766b7946eac6b4ff657fb01c9"
-              ]
-            },
-            "content": "`J` should equal `5`. For some more practice, use `echo` to print the value `J * 5 + 25`.",
-            "hints": [
-              "Type `echo $(( J * 5 + 25 ))` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "912",
-        "title": "echo $J",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "912.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "2deead559e8cb44bd732cc89411515765f20c416"
-              ]
-            },
-            "content": "It should have printed `50`. Print `J` with `echo` again.",
-            "hints": [
-              "Here's an example: `echo $<variable>`",
-              "Type `echo $J` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "913",
-        "title": "declare -p",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "913.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "6a71afd33be81920ec53bd34eabaf49ab60f5cd9"
-              ]
-            },
-            "content": "So, as a reminder, `(( ... ))` will perform a calculation or operation and output nothing. `$(( ... ))` will replace the calculation with the result of it. You made a few variables in this shell, view them with `declare -p`.",
-            "hints": [
-              "Type `declare -p` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "914",
-        "title": "declare -p J",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "914.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "c34f84a83956d09aa43263741d19377c26d992af"
-              ]
-            },
-            "content": "`declare` can be used to create variables, but you are just going to use it to view them for now. If you scroll up a little, you should find your `I` and `J` variables in there. View `J` with `declare -p J`.",
-            "hints": [
-              "Type `declare -p J` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "916",
-        "title": "declare -p RANDOM",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "916.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "8f749ed393abde09092dc350b8bfe5ff1c486ef8"
-              ]
-            },
-            "content": "I saw `RANDOM` in that list, too. View it with `declare -p <variable>` like you did for `J`.",
-            "hints": [
-              "Type `declare -p RANDOM` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "918",
-        "title": "echo $(( RANDOM % 75 ))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "918.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "5134424a064cb6a69ee0ab7499e8ab16d0f2b35e"
-              ]
-            },
-            "content": "Okay, I think I finally know how to get the random number for the Bingo Number Generator. Use `echo` and `RANDOM % 75` to print a random number in the terminal.",
-            "hints": [
-              "Use the `$(( ... ))` syntax to calculate the random number",
-              "Here's an example: `echo $(( <calculation> ))`",
-              "Type `echo $(( RANDOM % 75 ))` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "920",
-        "title": "echo $(( RANDOM % 75 + 1 ))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "920.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "da97f0e1883c5104900a6504041b29dc5c7d7bc6"
-              ]
-            },
-            "content": "One tiny problem, that calculation will give a number between 0 and 74. Enter the same command in the terminal, but add `1` to the calculation to get a random number between 1 and 75.",
-            "hints": [
-              "Type `echo $(( RANDOM % 75 + 1 ))` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "928",
-        "title": "Set NUMBER=$(( RANDOM % 75 + 1))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "928.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "8ec3c9dbc3d1c39e8a28aa82955a0e7937600a4c"
-              ]
-            },
-            "content": "Back in your `bingo.sh` script, change the `NUMBER` variable so that it starts as a random number between 1 and 75 using the syntax you have been practicing.",
-            "hints": [
-              "Change the `NUMBER` variable to the result of the calculation `RANDOM % 75 + 1`",
-              "Use the `$(( ... ))` syntax to make the calculation",
-              "It should look like this: `NUMBER=$(( RANDOM % 75 + 1 ))`"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "930",
-        "title": "run ./bingo.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "930.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "4b9f589d3f7fd407704e30c23118f4c3fa3f6ecd"
-              ]
-            },
-            "content": "Run your script a few times in a row to make sure it's working.",
-            "hints": [
-              "Type `./bingo.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first",
-              "Run it at least two times in a row"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "940",
-        "title": "Add TEXT variable",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "940.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "3de64e66c183ba76ff3fdfd9989985ef89f0bbff"
-              ]
-            },
-            "content": "Next, create a `TEXT` variable and set the value to `\"The next number is, \"`. When the script is finished, the output will be something like `The next number is B:15`.",
-            "hints": [
-              "Make sure there's a space after the comma",
-              "Add `TEXT=\"The next number is, \"` to the `bingo.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "945",
-        "title": "help let",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "945.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "9c3dc72d2c625928502cc904e8b570e7334a7ab7"
-              ]
-            },
-            "content": "The letter that goes with the random number depends on what the number is. If it's 15 or less, it will be a `B`. I saw some comparisons in the `help let` menu, take a look at it again.",
-            "hints": [
-              "Type `help let` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "950",
-        "title": "Add first if <= 15",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "950.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "95df0dfebab1128cfad964eaf707a645bb9b97fc"
-              ]
-            },
-            "content": "You used the double square brackets with your `if` statement in the last program, but you can use the double parenthesis with these operators as well. In your script, create an `if` statement that uses double parenthesis for the condition. Check if the number variable is less than or equal to 15. If it is, use your two variables to print `The next number is, B:<number>`.",
-            "hints": [
-              "Make sure you only have two `echo` statements in your script, the title being one of them",
-              "Here's an example of how your `if` statement should look:\n```sh\nif (( CONDITION ))\nthen\n  STATEMENTS\nfi\n```",
-              "The condition you want is `(( NUMBER <= 15 ))`",
-              "In the statements area, use `echo` and your two variables to print `The next number is, B:<number>`",
-              "The statements area should look like this: `echo $TEXT B:$NUMBER`",
-              "The whole `if` statement should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nfi\n```"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "960",
-        "title": "Add elif -le 30",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "960.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "f16aa4462ca66e6d5aa3497d6762942f713a0536"
-              ]
-            },
-            "content": "`if` statements can have an \"else if\" area like this:\n```sh\nif (( CONDITION ))\nthen\n  STATEMENTS\nelif [[ CONDITION ]]\nthen\n  STATEMENTS\nfi\n```\n\nUsing the double square brackets this time, add an `elif` condition that checks if the number variable is less than or equal to `30`. If it is, use your two variables again to print `The next number is, I:<number>`",
-            "hints": [
-              "View the `help test` menu to see the operators you can use with the double square brackets",
-              "The condition you want is `[[ $NUMBER -le 30 ]]`. Don't forget the `$`",
-              "In the statements area, use `echo` and your two variables to print `The next number is, I:<number>`",
-              "The statements area should look like this: `echo $TEXT I:$NUMBER`",
-              "The `elif` area should look like this:\n```sh\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nfi\n```",
-              "The whole `if` statement should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nfi\n```"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "970",
-        "title": "Add elif < 46",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "970.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "b4166345c91dd10c40a5e75cd3cca464af048997"
-              ]
-            },
-            "content": "You can add as many `elif` sections to an `if` statement as you want. Add another `elif`, below the last, one that uses the double parenthesis to check if the number variable is less than 46. If it is, use your two variables to print `The next number is, N:<number>`",
-            "hints": [
-              "View the `help let` menu to see the operators you can use with the double parenthesis",
-              "The operator you want it `<`",
-              "You can add another `elif` like this:\n```sh\nif CONDITION\nthen\n  STATEMENTS\nelif CONDITION\nthen\n  STATEMENTS\nelif CONDITION\nthen\n  STATEMENTS\nfi\n```",
-              "The condition you want is `(( NUMBER < 46 ))`",
-              "In the statements area, use `echo` and your two variables to print `The next number is, N:<number>`",
-              "The statements area should look like this: `echo $TEXT N:$NUMBER`",
-              "This `elif` area should look like this:\n```sh\nelif (( NUMBER < 46 ))\nthen\n  echo $TEXT N:$NUMBER\nfi\n```",
-              "The whole `if` statement should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nelif (( NUMBER < 46 ))\nthen\n  echo $TEXT N:$NUMBER\nfi\n```"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "980",
-        "title": "Add elif -lt 61",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "980.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "64e1814522ff7e16b98e71a2f25065b092ae6277"
-              ]
-            },
-            "content": "Run your script if you want to see the output. It should print one of the sentences if the random number is less than 46. It may take a couple tries. Add another `elif`, below the last one, that uses double square brackets to check if the number variable is less than 61. If it is, use your two variables to print `The next number is, G:<number>`",
-            "hints": [
-              "View the `help test` menu to see the operators you can use with the double square brackets",
-              "The operator you want it `-lt`",
-              "The condition you want is `[[ $NUMBER -lt 61 ]]`. Don't forget the `$`",
-              "The statements area should look like this: `echo $TEXT G:$NUMBER`",
-              "This `elif` area should look like this:\n```sh\nelif [[ $NUMBER -lt 61 ]]\nthen\n  echo $TEXT G:$NUMBER\nfi\n```",
-              "The whole `if` statement should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nelif (( NUMBER < 46 ))\nthen\n  echo $TEXT N:$NUMBER\nelif [[ $NUMBER -lt 61 ]]\nthen\n  echo $TEXT G:$NUMBER\nfi\n```"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "990",
-        "title": "Add else",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "990.1",
-            "setup": {
-              "watchers": [
-                "./bingo.sh"
-              ],
-              "commits": [
-                "dae11871e995ca83f1855dc55651983a4d597321"
-              ]
-            },
-            "content": "One more case to handle. Add an `else` at the bottom of the `if` that uses your two variables to print `The next number is, O:<number>`.",
-            "hints": [
-              "View the `if/else` in your `countdown.sh` file to see how you did it before",
-              "You don't need a condition or the `then` on this one",
-              "Here's an example:\n```sh\nif CONDITION\nthen\n  STATEMENTS\nelif CONDITION\nthen\n  STATEMENTS\n...\nelse\n  STATEMENTS\nfi\n```",
-              "The `else` area should look like this:\n```sh\nelse\n  echo $TEXT O:$NUMBER\n```",
-              "The whole `if` should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nelif (( NUMBER < 46 ))\nthen\n  echo $TEXT N:$NUMBER\nelif [[ $NUMBER -lt 61 ]]\nthen\n  echo $TEXT G:$NUMBER\nelse\n  echo $TEXT O:$NUMBER\nfi\n```"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1000",
-        "title": "./bingo.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1000.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "2c986eb511c51c43532bf7780a6ef850fc9720e7"
-              ]
-            },
-            "content": "Run your script a few times and make sure it's working.",
-            "hints": [
-              "Type `./bingo.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first",
-              "Run it at least two times in a row"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1010",
-        "title": "touch fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1010.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "ea544a2b1e68030e7f2c1d388ac1dde57a8d94bc"
-              ]
-            },
-            "content": "I think the generator is done :smile: The next project is a fortune teller. Use the `touch` command to create `fortune.sh` in the same folder as the other scripts.",
-            "hints": [
-              "Type `touch fortune.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1020",
-        "title": "chmod +x fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1020.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "d7db462a28f08be7ac0535925048a482d58fb66a"
-              ]
-            },
-            "content": "Give your file executable permissions.",
-            "hints": [
-              "Use the `chmod` command with the `+x` flag",
-              "Here's an example `chmod <permissions> <filename>`",
-              "You previously used `chmod +x bingo.sh`",
-              "Type `chmod +x fortune.sh` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1030",
-        "title": "Add shebang",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1030.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "5594a1813efb2c10c1b0e3d0d6a0e93a761af1db"
-              ]
-            },
-            "content": "Add a `shebang` at the top of your new file that uses `bash` again.",
-            "hints": [
-              "A `shebang` looks like this: `#!<path_to_interpreter>`",
-              "Enter `which bash` in the terminal to see the path to `bash`",
-              "Look at the `shebang` in one of your other scripts to get the syntax",
-              "It should look like this: `#!/bin/bash`",
-              "Add `#!/bin/bash` at the top of your `fortune.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1040",
-        "title": "Add comment",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1040.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "77515c832bd85e4bd9e9d4d728fff1b5b7cd1ff1"
-              ]
-            },
-            "content": "Add comment `Program to tell a persons fortune`",
-            "hints": [
-              "Comments look like this: `# <comment>`",
-              "Add `#Program to tell a persons fortune` below the `shebang`",
-              "Capitalization matters"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1050",
-        "title": "Add echo \"title\"",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1050.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "6951b5d0829374ac88704255d3ebf90c2f13cf21"
-              ]
-            },
-            "content": "Add a title for this one like the others. This one should say `~~ Fortune Teller ~~`. Don't forget the empty line before and after it.",
-            "hints": [
-              "Print the whole title and the empty lines with a single `echo` command",
-              "Use the `echo` command with the `-e` flag and the new line (`\\n`) character",
-              "Don't forget to put it in double quotes",
-              "Take a look at one of the title's from a previous file for a hint",
-              "Here's an example: `echo -e \"\\n<message>\\n\"`",
-              "You previously used `echo -e \"\\n~~ Bingo Number Generator ~~\\n\"`",
-              "Add `echo -e \"\\n~~ Fortune Teller ~~\\n\"` below the comment of your `fortune.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1060",
-        "title": "./fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1060.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "0a8db77375a7013e15c916a9db9575afc2c30c5c"
-              ]
-            },
-            "content": "Run the file once to make sure it's working.",
-            "hints": [
-              "Type `./fortune.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1070",
-        "title": "ARR=(\"a\" \"b\" \"c\")",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1070.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "623ed42d5371694d5d0ba8603c21879616ea4a75"
-              ]
-            },
-            "content": "This program will have an array of responses. One will be printed randomly after a user inputs a question. Practice first :smile: In the terminal, create an array like this: `ARR=(\"a\" \"b\" \"c\")`",
-            "hints": [
-              "Type the suggested command in the terminal",
-              "Type `ARR=(\"a\" \"b\" \"c\")` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1080",
-        "title": "echo ${ARR[1]}",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1080.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "f453da591e72f940c065a6d08a08df5adadc8bd7"
-              ]
-            },
-            "content": "Each variable in the array is like any other variable, just combined into a single variable. In the terminal, print the second item in the array with `echo ${ARR[1]}`. Note that the first item would be index zero.",
-            "hints": [
-              "Type `echo ${ARR[1]}` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1090",
-        "title": "echo ${ARR[@]}",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1090.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "ecccc60a74c8adfd577fe37ad9da3bc3b35be18d"
-              ]
-            },
-            "content": "If you recall, you were able to print all the arguments to your `countdown.sh` script with `echo $*`. `echo $@` would have worked as well. Similarly, you can use the `*` or `@` to print your whole array. In the terminal, use `echo` to print all the items in your array.",
-            "hints": [
-              "Here's an example `echo ${ARR[<index>]}`",
-              "Type `echo ${ARR[@]}` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1100",
-        "title": "declare -p ARR",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1100.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "0efbb3d3c7480a490818f7645695cffe66e501c4"
-              ]
-            },
-            "content": "The variable must be in that `declare` list. View your array variable using the `declare` command and the `-p` flag.",
-            "hints": [
-              "Here's an example: `declare -p <variable>`",
-              "Type `declare -p ARR` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1110",
-        "title": "Add RESPONSES array",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1110.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "1dda61c8b704603d8a5b4eea2f49e296c9fe0d8b"
-              ]
-            },
-            "content": "The `-a` next to it stands for `array`. In your script, create an array named `RESPONSES`. Give it these six values: `Yes`, `No`, `Maybe`, `Outlook good`, `Don't count on it`, and `Ask again later`.",
-            "hints": [
-              "Here's an example: `VARIABLE=(value value ...)`",
-              "Make sure any values with spaces are in proper quotes",
-              "You created your other array with `ARR=(\"a\" \"b\" \"c\")`",
-              "Add `RESPONSES=(\"Yes\" \"No\" \"Maybe\" \"Outlook good\" \"Don't count on it\" \"Ask again later\")` in your script"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1120",
-        "title": "echo ${RESPONSES[5]}",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1120.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "a3b1013e7d8e02f2cbe242ae89b7188a742612a3"
-              ]
-            },
-            "content": "In your script, use `echo` to print the last item in the array.",
-            "hints": [
-              "Here's an example `echo ${ARR[<index>]}`",
-              "Remember that the first item starts at zero",
-              "Add `echo ${RESPONSES[5]}` to your `fortune.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1130",
-        "title": "./fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1130.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "d7de1925b419877fa9437c7dcc5d75b9d230b3cb"
-              ]
-            },
-            "content": "Run it to see the output.",
-            "hints": [
-              "Type `./fortune.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1140",
-        "title": "Add N=$(( RANDOM % 6 ))",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1140.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "b683256070e75446442d0afdefe0349cb257d1f6"
-              ]
-            },
-            "content": "You will randomly print one of the values. In your script, create a variable named `N`. Set it equal to a random number between `0` and `5`, the first and last index of the array.",
-            "hints": [
-              "Use the modulus (`%`) operator and `6` to get a number between `0` and `5`",
-              "Look at the random number you created in the `bingo.sh` file for a hint",
-              "Here's an example: `VARIABLE=$(( <calculation> ))`",
-              "Calculate a random number in the range you want with `RANDOM % 6`",
-              "Add `N=$(( RANDOM % 6 ))` to the script"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1150",
-        "title": "Change to echo ${RESPONSES[$N]}",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1150.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "1fd559d54ea22ed048bddcd0fbacb7e8e128e0f3"
-              ]
-            },
-            "content": "Change your `echo` command to print the item in the array whose index is the random number you generated.",
-            "hints": [
-              "Use your `$N` variable as the index where you print an item from the array",
-              "Don't forget that scripts run from top to bottom, so you can't use any variables before they are created",
-              "Change the `echo` line to `echo ${RESPONSES[$N]}`"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1160",
-        "title": "help",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1160.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "d4e94be608b78fa47cd1e1814559feb6c1c4ffed"
-              ]
-            },
-            "content": "You will create a function to generate an answer. Check the `help` menu to see if you can find anything.",
-            "hints": [
-              "Enter the suggested command in the terminal",
-              "Type `help` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1170",
-        "title": "help function",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1170.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "be87549563c4f1e5ea966faa38530ae1777a0d69"
-              ]
-            },
-            "content": "See any that might help? There's one that says `function`. See if you can find out more about it.",
-            "hints": [
-              "Use the `help` command to find out more",
-              "Here's an example: `help <command>`",
-              "Type `help function` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1180",
-        "title": "Add GET_FORTUNE function",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1180.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "b316e208aa6e0df6d77129b17ab3316feae04824"
-              ]
-            },
-            "content": "It looks like you can create a function like this:\n\n```sh\nFUNCTION_NAME() {\n  STATEMENTS\n}\n```\n\nAdd an empty function named `GET_FORTUNE` to your script. Make sure the response you are printing is the last thing in the script.",
-            "hints": [
-              "Add this to your script:\n```sh\nGET_FORTUNE() {}\n```",
-              "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1190",
-        "title": "Add echo Ask a yes or no question",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1190.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "6c03b37bfc570c024021c23063aa4ef6d75546d7"
-              ]
-            },
-            "content": "In your function, use `echo` to print `Ask a yes or no question:`",
-            "hints": [
-              "Your function should look like this:\n```sh\nGET_FORTUNE() {\n  echo Ask a yes or no question:\n}\n```",
-              "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1200",
-        "title": "Add GET_FORTUNE function call",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1200.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "3f1f7241dc0c31862b81378d7a5cfa181888b493"
-              ]
-            },
-            "content": "Call your function by putting the name of it below where you create it. No `$` needed. Make sure the response you are printing is at the bottom of the file.",
-            "hints": [
-              "Add `GET_FORTUNE` below where you create your function to call it",
-              "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1210",
-        "title": "./fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1210.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "e420d6391ab95417d69218db7f4ecdaafc134a56"
-              ]
-            },
-            "content": "Run your script to make sure it's working.",
-            "hints": [
-              "Type `./fortune.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1220",
-        "title": "Add read QUESTION",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1220.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "94d94c79258678006b173a52913ab43cea4e9a0f"
-              ]
-            },
-            "content": "In your function after you print the sentence, use `read` to get user input into a variable named `QUESTION`.",
-            "hints": [
-              "Add `read QUESTION` to your function below the `echo`",
-              "Your function should look like this:\n```sh\nGET_FORTUNE() {\n  echo Ask a yes or no question:\n  read QUESTION\n}\n```",
-              "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1230",
-        "title": "./fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1230.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "8636c61453e2c63e501e0c8c7e6a526b15c7da11"
-              ]
-            },
-            "content": "Run the script again to test it out. Enter a question when it asks.",
-            "hints": [
-              "Type `./fortune.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1240",
-        "title": "help",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1240.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "b22ac4a5cdc58fcfbd4d4ffbf0462072493a1825"
-              ]
-            },
-            "content": "I want to make sure the input is a question. You are going to add a loop that asks for input until the input ends with a question mark. View the `help` menu to see if you can find an appropriate loop.",
-            "hints": [
-              "Type `help` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1250",
-        "title": "help until",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1250.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "265f1df44734c6f7b489d8bf54fac2acb1470aa6"
-              ]
-            },
-            "content": "View more about that `until` command. That might be the one to use here.",
-            "hints": [
-              "Use `help <command>` to view more about a command",
-              "Type `help until` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1260",
-        "title": "Add until loop",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1260.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "b7a1a25197f0dcab9f4cbcd0cea860bb725511fb"
-              ]
-            },
-            "content": "The `until` loop is very similar to the `while` loop you used. It will execute the loop until a condition is met. Here's an example:\n\n```sh\nuntil [[ CONDITION ]]\ndo\n  STATEMENTS\ndone\n```\n\nAdd an `until` loop below your function. Use the double brackets to check if `QUESTION` is equal to `test?`. Move the `GET_FORTUNE` function call to the statements area of the loop. It should run the function until you input `test?` as the question.",
-            "hints": [
-              "View the `help [[` or `help test` menu to see if you can find the operator to use",
-              "You want the `==` operator",
-              "The condition should look like this: `[[ $QUESTION == test? ]]`",
-              "Your `until` loop should look like this:\n```sh\nuntil [[ $QUESTION == test? ]]\ndo\n  GET_FORTUNE\ndone\n```",
-              "You should only call the `GET_FORTUNE` function once",
-              "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1270",
-        "title": "./fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1270.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "8d0d909bde054312f6066aea2e2fc7de747bb7c7"
-              ]
-            },
-            "content": "Run the script and enter something other than `test?`. Then enter `test?` after it asks for a question the second time.",
-            "hints": [
-              "Type `./fortune.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1280",
-        "title": "help [[ expression ]]",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1280.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "bfb64b6385a81ee408b29f19adb6bd91fe8a1954"
-              ]
-            },
-            "content": "View that `help [[ expression ]]` menu again. You need to find out how to test if the input ends with a question mark (`?`).",
-            "hints": [
-              "Type `help [[` or `help [[ expression ]]` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1290",
-        "title": "[[ hello == hello ]]; echo $?",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1290.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "17977bd8b2d9397bb01547bfcb6dbbe5708799ae"
-              ]
-            },
-            "content": "Let's play with these again. You can test if two strings are the same with `==`. In the terminal, use the `[[ ... ]]; echo $?` syntax you used before to test if `hello` is equal to `hello`.",
-            "hints": [
-              "Be sure to use the `==` operator",
-              "Type `[[ hello == hello ]]; echo $?` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1300",
-        "title": "[[ hello == world ]]; echo $?",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1300.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "96a94a93b8358753f191daa89b335f545a3cb838"
-              ]
-            },
-            "content": "Exit status of `0`, it was true. Using the same syntax, test if `hello` is equal to `world`.",
-            "hints": [
-              "Use the `[[ ... ]]; echo $?` syntax",
-              "Be sure to use the `==` operator",
-              "Type `[[ hello == world ]]; echo $?` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1310",
-        "title": "[[ hello =~ el ]]; echo $?",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1310.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "df02e2e7b008ca5bd0fd4bb0aac2abd0d667a9f8"
-              ]
-            },
-            "content": "False. An important operator in that menu is `=~`. It allows for pattern matching. Using the same syntax but with this operator, check if `hello` contains the pattern `el`.",
-            "hints": [
-              "Use the `[[ ... ]]; echo $?` syntax",
-              "Use the `=~` operator with it",
-              "Type `[[ hello =~ el ]]; echo $?` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1320",
-        "title": "[[ \"hello world\" =~ \"lo wor\" ]]; echo $?",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1320.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "3c4569cd60ecc23bbda675a4e4ef7ea9b87d173d"
-              ]
-            },
-            "content": "True. The condition was checking for `el` within the word `hello`. Using the same syntax, check if `hello world` contains the pattern `lo wor`. You will need to put them both in quotes so it recognizes the spaces.",
-            "hints": [
-              "Use the `[[ ... ]]; echo $?` syntax",
-              "Use the `=~` operator with it",
-              "Type `[[ \"hello world\" =~ \"lo wor\" ]]; echo $?` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1330",
-        "title": "[[ \"hello world\" =~ ^h ]]; echo $?",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1330.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "a319dd1fe827121bbf17c95b621b2b8c7c3532fc"
-              ]
-            },
-            "content": "Your patterns have been checking for literal matches, `el` and `lo wor`. You can use regular expression characters as well, but you can't put the pattern in quotes when you do. Using the same syntax, check if `hello world` starts with an `h` by using `^h` as the pattern.",
-            "hints": [
-              "Make sure not to use quotes around the pattern when using regex characters it",
-              "Type `[[ \"hello world\" =~ ^h ]]; echo $?` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1340",
-        "title": "[[ \"hello world\" =~ ^h.+d$ ]]; echo $?",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1340.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "746b06a16e9833003f83b02787c1762e8e6ba4be"
-              ]
-            },
-            "content": "Do it again, but use `^h.+d$` as the pattern to see if the string starts with an `h`, has at least one character after it, and ends with a `d`.",
-            "hints": [
-              "Use the `[[ ... ]]; echo $?` syntax again",
-              "Check if `hello world` contains the suggested pattern",
-              "Make sure not to use quotes around the pattern when using regex characters it",
-              "Type `[[ \"hello world\" =~ ^h.+d$ ]]; echo $?` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1350",
-        "title": "VAR=\"hello world\"",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1350.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "dff21c36f05edbbed439977157439e7b4b9b9de1"
-              ]
-            },
-            "content": "In the terminal, create a variable named `VAR` that equals `hello world`.",
-            "hints": [
-              "Type `VAR=\"hello world\"` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1360",
-        "title": "echo $VAR",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1360.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "3aad4db218f986446ba0e8c82bc0e0a51cca1293"
-              ]
-            },
-            "content": "Use `echo` to print the variable you just created.",
-            "hints": [
-              "Type `echo $VAR` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1370",
-        "title": "[[ $VAR == \"hello world\" ]]; echo $?",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1370.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "56d83d0cd5b3bbf84ebb730e247b40ebf28da3dc"
-              ]
-            },
-            "content": "Using the `[[ ... ]]; echo $?` syntax, check if your variable is equal to `hello world`.",
-            "hints": [
-              "Check the `help [[` menu to find the operator to use",
-              "It's the `==` operator",
-              "You want to check if `$VAR == \"hello world\"`",
-              "Type `[[ $VAR == \"hello world\" ]]; echo $?` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1380",
-        "title": "[[ $VAR =~ \\?$ ]; echo $?",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1380.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "a6d2312d8d9cb702ba7edbff045f5a2efb11ad13"
-              ]
-            },
-            "content": "Using the same syntax, check if your variable ends with `?` by using the pattern `\\?$`.",
-            "hints": [
-              "Be sure to use the pattern matching operator",
-              "It's the `=~` operator",
-              "You want to check if `$VAR =~ \\?$`",
-              "Type `[[ $VAR =~ \\?$ ]]; echo $?` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1385",
-        "title": "[[ test? =~ \\?$ ]; echo $?",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1385.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "7ba9227d7503ec7a09d60c89ba003e140bba4150"
-              ]
-            },
-            "content": "It doesn't end with `?`. Just to make sure I don't have the pattern wrong, check if `test?` ends with `?`.",
-            "hints": [
-              "Use the same `[[ ... ]]; echo $?` syntax you have been using",
-              "Use the `\\?$` pattern to see if a string ends with `?`",
-              "Make sure you're using the pattern matching operator `=~`",
-              "You want to check if `test? =~ \\?$`",
-              "Type `[[ test? =~ \\?$ ]]; echo $?` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1390",
-        "title": "Change until condition",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1390.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "2343279c3ec7a75dcba124b8ed351d3b847dbe74"
-              ]
-            },
-            "content": "I think that will work. Back in your script, change the `until` condition to see if your variable ends with `?`.",
-            "hints": [
-              "Use the pattern matching operator with `\\?$`",
-              "It's the `=~` operator",
-              "Your condition should look like this: `[[ $QUESTION =~ \\?$ ]]`",
-              "Make sure there's spaces inside the brackets and around the operator"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1400",
-        "title": "./fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1400.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "223ecb2c295fa1644e71ead61109f23f2237b074"
-              ]
-            },
-            "content": "Run the script and input something that doesn't end with `?` the first time, then something that does the second.",
-            "hints": [
-              "Type `./fortune.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1410",
-        "title": "Add if to GET_FORTUNE",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1410.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "ee7edd971227a17b9068f8700734ef4c07e7e315"
-              ]
-            },
-            "content": "I know that it asks the same thing if the input isn't what you want. You should let users know that it needs to end with `?`. Add an `if` condition in your **function** that checks `if [[ ! $1 ]]`. Put the existing `echo` statement in the `then` area and make sure the existing `read` is below the whole `if` condition.",
-            "hints": [
-              "Here's an example:\n```sh\nif [[ CONDITION ]]\nthen\n  STATEMENTS\nfi\n\nread QUESTION\n```",
-              "Your function should look like this:\n```sh\nfunction GET_FORTUNE() {\n  if [[ ! $1 ]]\n  then\n    echo Ask a yes or no question:\n  fi\n\n  read QUESTION\n}\n```"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1412",
-        "title": "Add else to if [[ ! $1 ]]",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1412.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "0071ab68833e7b96f1c350db04505025790e34d6"
-              ]
-            },
-            "content": "You can pass arguments to functions like you did with your script. This condition will check if one isn't passed and print the sentence. Add an `else` to your `if`. Use `echo` to print `Try again. Make sure it ends with a question mark:` if the condition fails.",
-            "hints": [
-              "Here's an example:\n```sh\nif [[ CONDITION ]]\nthen\n  STATEMENTS\nelse\n  STATEMENTS\nfi\n```",
-              "Your `if` condition should look like this:\n```sh\nif [[ ! $1 ]]\nthen\n  echo Ask a yes or no question:\nelse\n  echo Try again. Make sure it ends with a question mark:\nfi\n```"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1413",
-        "title": "Add argument to function call",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1413.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "d4451ac2176dbd9ac0041cde537fcdd5c3697e55"
-              ]
-            },
-            "content": "Now, your function will print one thing if you pass it any argument, and something else if not. In the `until` loop, add `again` as an argument to where you call the function.",
-            "hints": [
-              "Here's an example: `FUNCTION_NAME argument`",
-              "Your function call should look like this: `GET_FORTUNE again`",
-              "Your `until` loop should look like this:\n```sh\nuntil [[ $QUESTION =~ \\?$ ]]\ndo\n  GET_FORTUNE again\ndone\n```"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1416",
-        "title": "Add Initial function call",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1416.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "68be1c2dcd6ee9b36abe4c7ca94376a1b9eb2de0"
-              ]
-            },
-            "content": "Now, each time the function is called in the `until` loop, it will pass `again` as an argument and print the `Try again...` sentence. Before your `until` loop, call the function without an argument so the first time it runs, it prints the initial sentence.",
-            "hints": [
-              "Add `GET_FORTUNE` before the `until` loop"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1420",
-        "title": "./fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1420.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "c6d9d2bc9865306125f5d98660f7035cec5aee30"
-              ]
-            },
-            "content": "Run the script and enter something without a question mark when it asks the first time. Use a question mark the second time.",
-            "hints": [
-              "Type `./fortune.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1425",
-        "title": "Add line break in front of response",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1425.1",
-            "setup": {
-              "watchers": [
-                "./fortune.sh"
-              ],
-              "commits": [
-                "321e2cd4502df41267ecbb33c05ceea0644eab14"
-              ]
-            },
-            "content": "Awesome. One last thing. Add an empty line in front of where you print the response.",
-            "hints": [
-              "Change the existing `echo ${RESPONSES[$N]}` line",
-              "Use the `-e` flag and the new line (`\\n`) character with the `echo` statement",
-              "Make sure to use quotes so it prints the new line",
-              "Run the script and see if it's working",
-              "The suggested command should look like this: `echo -e \"\\n${RESPONSES[$N]}\"`"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1428",
-        "title": "./fortune.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1428.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "ba710bb0a33b2ca85225a0f33505c8ab68a8d2f6"
-              ]
-            },
-            "content": "Run the script one more time to see if you like the output.",
-            "hints": [
-              "Type `./fortune.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1430",
-        "title": "touch five.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1430.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "baed26b4a883e347ac934ee6c7f17544c0864525"
-              ]
-            },
-            "content": "Excellent. One last program to make. Use `touch` to create a new file named `five.sh` in the same folder as the others.",
-            "hints": [
-              "Type `touch five.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1440",
-        "title": "chmod +x five.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1440.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "8871c76ade36df20b70b54dd445a704f375cbce2"
-              ]
-            },
-            "content": "Give your file executable permissions.",
-            "hints": [
-              "Use the `chmod` command with the `+x` flag",
-              "Here's an example `chmod <permissions> <filename>`",
-              "You previously used `chmod +x fortune.sh`",
-              "Type `chmod +x five.sh` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1450",
-        "title": "Add shebang",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1450.1",
-            "setup": {
-              "watchers": [
-                "./five.sh"
-              ],
-              "commits": [
-                "76dae6454fe94897680bbff107cbaad866f963bc"
-              ]
-            },
-            "content": "Add a `shebang` to the new script that uses `bash` like the others.",
-            "hints": [
-              "A `shebang` looks like this: `#!<path_to_interpreter>`",
-              "Enter `which bash` in the terminal to see the path to `bash`",
-              "Look at the `shebang` in one of your other scripts to get the syntax",
-              "It should look like this: `#!/bin/bash`",
-              "Add `#!/bin/bash` at the top of your `five.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1460",
-        "title": "Add comment",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1460.1",
-            "setup": {
-              "watchers": [
-                "./five.sh"
-              ],
-              "commits": [
-                "ed6462b82c4e4857a441ff230fb520cf6fd367ec"
-              ]
-            },
-            "content": "Add a comment below the `shebang` that says, `Program to run my other four programs`",
-            "hints": [
-              "Comments look like this: `# <comment>`",
-              "Add `# Program to run my other four programs` below the `shebang`",
-              "Capitalization matters"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1470",
-        "title": "Add ./questionnaire.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1470.1",
-            "setup": {
-              "watchers": [
-                "./five.sh"
-              ],
-              "commits": [
-                "5cb8417efa55f29ea4a88db08a62aa452414dd5c"
-              ]
-            },
-            "content": "This program will run all the programs you made so far consecutively. Add the command to run the `questionnaire.sh` file.",
-            "hints": [
-              "The command should look like how you would execute the file in the terminal",
-              "Add `./questionnaire.sh` to the `five.sh` file"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1480",
-        "title": "./five",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1480.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "7808757cbf8c839ffbf545b0c8c53a7346dbc430"
-              ]
-            },
-            "content": "Run the file to see if it works. Enter input when it asks.",
-            "hints": [
-              "Type `./five.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1490",
-        "title": "Add the rest of the scripts",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1490.1",
-            "setup": {
-              "watchers": [
-                "./five.sh"
-              ],
-              "commits": [
-                "93c0f33a84976ec749d885888238cd10fcacd780"
-              ]
-            },
-            "content": "Add commands to run the rest of your scripts in the file. They should be in this order: `questionnaire`, `countdown`, `bingo`, and `fortune`. Don't forget that your `countdown.sh` file needs an argument, so put a `3` next to it.",
-            "hints": [
-              "Your `five.sh` file should have these commands:\n```sh\n./questionnaire.sh\n./countdown.sh 3\n./bingo.sh\n./fortune.sh\n```"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1500",
-        "title": "Clear",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1500.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "efbac3d83741d715eb42acf2d206e0403aa7747a"
-              ]
-            },
-            "content": "Okay, use `clear` to empty out what's in the terminal before the big moment.",
-            "hints": [
-              "Type `clear` in the terminal"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1510",
-        "title": "./five",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1510.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "c556437c2d0ca56f18a25665e08c42470fe7085d"
-              ]
-            },
-            "content": "Run the script and enter input when it asks.",
-            "hints": [
-              "Type `./five.sh` in the terminal and press enter",
-              "Make sure you are in the `project` folder first"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1520",
-        "title": "help",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1520.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "451a36c1fbdafd67667eb5b0850cd753aafb2a97"
-              ]
-            },
-            "content": "Cool. I think all the scripts are done. View the `help` menu again I want to explore one more thing.",
-            "hints": [
-              "Type `help` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1530",
-        "title": "help type",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1530.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "8988a3838299205c0665abb22211bc8d8786aa23"
-              ]
-            },
-            "content": "View more about that `type` command.",
-            "hints": [
-              "Use `help <command>` to find out more about a command",
-              "Type `help type` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1540",
-        "title": "type echo",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1540.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "604a60ba7980cb2f93568d3de644a1c0de636f5b"
-              ]
-            },
-            "content": "It says you can view the type of a command with `type <command>`. Just for fun, lets take a look at the type of a few different commands. View the type of `echo`.",
-            "hints": [
-              "Type `type echo` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1550",
-        "title": "type read",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1550.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "20fa9b569a294026c52646f84a0f25270ecc787e"
-              ]
-            },
-            "content": "View the type of the `read` command.",
-            "hints": [
-              "Type `type read` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1560",
-        "title": "type if",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1560.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "34f8e822b8025e76dfdbd64788ff5da455b168a5"
-              ]
-            },
-            "content": "View the type of `if`",
-            "hints": [
-              "Type `type if` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1570",
-        "title": "type then",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1570.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "d12c2252d5e0506566ac3503de07aba967a6e0fa"
-              ]
-            },
-            "content": "View the type of `then`",
-            "hints": [
-              "Type `type then` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1580",
-        "title": "type bash",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1580.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "285cfb6da0f2510182e5918256d24b9018c1ffcb"
-              ]
-            },
-            "content": "Those were all from the `help` menu and described as a `shell builtin` or `shell keyword`. View the type of `bash`",
-            "hints": [
-              "Type `type bash` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1590",
-        "title": "type psql",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1590.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "9e02dce8eeebb72c78e176dbf02d538a266f92b0"
-              ]
-            },
-            "content": "That's the location of the `bash` command. View the type of `psql`.",
-            "hints": [
-              "Type `type psql` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1600",
-        "title": "type ./five.sh",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1600.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "bdc65c71bbc2af49555377e473b685e3a698d688"
-              ]
-            },
-            "content": "It's showing the location of the commands. View the type of your `./five.sh` file.",
-            "hints": [
-              "Type `type ./five.sh` in the terminal and press enter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "1610",
-        "title": "exit",
-        "summary": "",
-        "content": "",
-        "steps": [
-          {
-            "id": "1610.1",
-            "setup": {
-              "watchers": [
-                "../.bash_history"
-              ],
-              "commits": [
-                "770f22a7f8ffd6fb35af172fdb698d209b3c894c"
-              ]
-            },
-            "content": "Last step, close the terminal with the `exit` command. Thanks and happy coding!",
-            "hints": [
-              "Type `exit` in the terminal and press enter"
-            ]
-          }
-        ]
+    "testRunner": {
+      "command": "npm run programmatic-test",
+      "args": {
+        "tap": "--reporter=mocha-tap-reporter"
+      },
+      "directory": ".freeCodeCamp"
+    },
+    "repo": {
+      "uri": "https://github.com/freeCodeCamp/learn-bash-scripting-by-building-five-programs",
+      "branch": "v1.0.3"
+    },
+    "continue": {
+      "commands": [
+        "./.freeCodeCamp/setup.sh",
+        "./.freeCodeCamp/reset.sh"
+      ]
+    },
+    "reset": {
+      "commands": [
+        "./.freeCodeCamp/setup.sh",
+        "./.freeCodeCamp/reset.sh"
+      ]
+    },
+    "dependencies": [
+      {
+        "name": "node",
+        "version": ">=10"
       }
-    ]
-  }
-  1
+    ],
+    "webhook": {
+      "url": "https://api.freecodecamp.org/coderoad-challenge-completed",
+      "events": {
+        "init": false,
+        "reset": false,
+        "step_complete": false,
+        "level_complete": false,
+        "tutorial_complete": true
+      }
+    }
+  },
+  "levels": [
+    {
+      "id": "780",
+      "title": "touch bingo.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "780.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "d89177fe677a7650177c7c326654f3c4410005e8"
+            ]
+          },
+          "content": "I think the countdown timer is finished. Feel free to try it with some other arguments. The next one is a bingo number generator. Use `touch` to create `bingo.sh` in the same folder as the others.",
+          "hints": [
+            "Type `touch bingo.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "790",
+      "title": "chmod +x bingo.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "790.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "f61cc3025bc4e0920561490287e1ec541d1838ae"
+            ]
+          },
+          "content": "Give your file executable permissions like you did for the other two.",
+          "hints": [
+            "Use the `chmod` command with the `+x` flag",
+            "Here's an example `chmod <permissions> <filename>`",
+            "You previously used `chmod +x countdown.sh`",
+            "Type `chmod +x bingo.sh` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "800",
+      "title": "Add shebang",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "800.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "e573fb6dfcb5a1b0e141e6151e4e45d042df910a"
+            ]
+          },
+          "content": "Add a `shebang` at the top of your new script. It should use `bash` again like other two.",
+          "hints": [
+            "A `shebang` looks like this: `#!<path_to_interpreter>`",
+            "Enter `which bash` in the terminal to see the path to `bash`",
+            "Look at the `shebang` in one of your other scripts to get the syntax",
+            "It should look like this: `#!/bin/bash`",
+            "Add `#!/bin/bash` at the top of your `bingo.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "810",
+      "title": "Add comment",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "810.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "b002044531bfa79a8ac8039eaba2218b9d145227"
+            ]
+          },
+          "content": "Add a comment below the `shebang` that says, `Bingo Number Generator`.",
+          "hints": [
+            "Comments look like this: `# <comment>`",
+            "Add `#Bingo Number Generator` below the `shebang`",
+            "Capitalization matters"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "815",
+      "title": "Add echo -e \"title\"",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "815.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "f6812255da0c59042b983ca7f3c8f74a508df997"
+            ]
+          },
+          "content": "Before I forget, use a single `echo` command to print a title for this program. It should say `~~ Bingo Number Generator ~~` with an empty line before and after it.",
+          "hints": [
+            "Use the `echo` command with the `-e` flag and the new line (`\\n`) character",
+            "Don't forget the double quotes when using a new line character",
+            "Take a look at one of the title's from a previous file for a hint",
+            "Here's an example: `echo -e \"\\n<message>\\n\"`",
+            "You previously used `echo -e \"\\n~~ Countdown Timer ~~\\n\"`",
+            "Add `echo -e \"\\n~~ Bingo Number Generator ~~\\n\"` below the comment of your `bingo.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "817",
+      "title": "Add NUMBER=5 variable",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "817.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "160620276d33b3722515c0762d530d5c42c97688"
+            ]
+          },
+          "content": "In your script, create a `NUMBER` variable that equals `5`.",
+          "hints": [
+            "Here's an example: `VARIABLE_NAME=VALUE`",
+            "Add `NUMBER=5` to the bottom of your `bingo.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "818",
+      "title": "echo $NUMBER",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "818.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "ccb0cf40e80055da4b9c0c19524d1b28c3f22967"
+            ]
+          },
+          "content": "Below your new variable, use `echo` to print it to the screen.",
+          "hints": [
+            "Here's an example: `echo $<variable>`",
+            "Use `NUMBER` in place of `<variable>`",
+            "Add `echo $NUMBER` at the bottom of your `bingo.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "819",
+      "title": "./bingo.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "819.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "a23baafcf824c0a00f78d9c80f13a5fef0f5ed1f"
+            ]
+          },
+          "content": "Run the script by executing it.",
+          "hints": [
+            "Type `./bingo.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "820",
+      "title": "printenv",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "820.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "4b991456b6b313d4eef4c3df32397d64d7351615"
+            ]
+          },
+          "content": "The numbers in bingo go up to 75, each number has a letter from the word `bingo` associated with it. You will need to randomly generate a number between 1 and 75. Bash may have something that can help you here. A shell comes with environment variables. View them by entering `printenv` in the terminal.",
+          "hints": [
+            "Type `printenv` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "822",
+      "title": "echo $LANG",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "822.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "8b88190537d0e32fcf22087d77170384c1d0ac7a"
+            ]
+          },
+          "content": "These are all environment variables, they are predefined and loaded with each shell. Most of them aren’t very relevant, but it’s nice to know they’re there. One of them is `LANG`. Use `echo` to print it in the terminal.",
+          "hints": [
+            "Here's an example: `echo $<variable>`",
+            "Type `echo $LANG` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "824",
+      "title": "declare -p",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "824.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "76f6ad3ce9b03576a7e2fb151bbcd963915f5d1f"
+            ]
+          },
+          "content": "View all variables in the shell with `declare -p`. `-p` stands for `print`",
+          "hints": [
+            "Type `declare -p` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "826",
+      "title": "echo $RANDOM",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "826.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "3f9c3a33ea27f3074d1e4a0d088a1f66b71f556a"
+            ]
+          },
+          "content": "This list includes all the environment variables, and any others that may have been created in the current shell. There's one named `RANDOM`. Use `echo` to print it in the terminal.",
+          "hints": [
+            "Here's an example: `echo $<variable>`",
+            "Type `echo $RANDOM` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "828",
+      "title": "Change to NUMBER=$RANDOM",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "828.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "2ad4aab3547a50b9a60cc8212545f170c481f576"
+            ]
+          },
+          "content": "Back in your script, use the `RANDOM` variable to set `NUMBER` to a random number instead of `5`.",
+          "hints": [
+            "Change `NUMBER=5` to `NUMBER=$RANDOM`"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "830",
+      "title": "./bingo.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "830.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "184730555401d1d6e8494f641fe639f4911bd2f8"
+            ]
+          },
+          "content": "Run the script a few times in a row to make sure it's working.",
+          "hints": [
+            "Type `./bingo.sh` in the terminal and press enter two times in a row",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "835",
+      "title": "Change to NUMBER=$RANDOM%75",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "835.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "c3685d7faddecb97eb9b574cbb11dddb1df3e5e6"
+            ]
+          },
+          "content": "The `RANDOM` variable will generate a random number between 0 and 32767. You can use the `modulus` operator to make it in the range you want. In your script, change the `NUMBER` variable to `$RANDOM%75`.",
+          "hints": [
+            "Change `NUMBER=$RANDOM` to `NUMBER=$RANDOM%75`"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "840",
+      "title": "./bingo.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "840.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "d00258bd766abaecc0f3e3598e0b6923cacbcbd9"
+            ]
+          },
+          "content": "Run the script again.",
+          "hints": [
+            "Type `./bingo.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "881",
+      "title": "I=0",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "881.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "233e6a95b97dae139700569b50bec1bfb6096754"
+            ]
+          },
+          "content": "Bash sees everything as a string so it just printed the `%75` part literally. In the terminal, create an `I` variable equal to `0` (zero), so you can play with it and figure out how to do some calculations.",
+          "hints": [
+            "Type `I=0` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "884",
+      "title": "echo $I",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "884.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "eb0e3f5a823b316a19c367bd2abce6bdeea6634d"
+            ]
+          },
+          "content": "In the terminal, use `echo` to print your new variable.",
+          "hints": [
+            "Here's an example: `echo $<variable>`",
+            "Type `echo $I` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "887",
+      "title": "(( I++ ))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "887.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "7a309d0fd6aa04f7fcf814af9c6dae14283ce4d5"
+            ]
+          },
+          "content": "I noticed that you used double parenthesis in the `while` loop of your countdown timer to subtract one from `I`. Type `(( I++ ))` in the terminal to see if anything happens.",
+          "hints": [
+            "Type `(( I++ ))` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "890",
+      "title": "echo $I",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "890.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "2e8809b0dfa9cb8aa605ffff20711d2039623e1b"
+            ]
+          },
+          "content": "There was no output. Use `echo` to print `I` in the terminal again.",
+          "hints": [
+            "Type `echo $I` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "891",
+      "title": "help let",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "891.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "50a90b236855352b803b4667190fa1ec1e1a6749"
+            ]
+          },
+          "content": "The double parenthesis performed the calculation, changing the value of `I` from `0` to `1`. Enter `help let` in the terminal to see the operators you can use with the double parenthesis.",
+          "hints": [
+            "Type `help let` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "893",
+      "title": "(( I += 10 ))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "893.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "8b444bc1fdcf793c0f91b9c86319e28c08cd79a0"
+            ]
+          },
+          "content": "You used several of these now, including in the `for` loop from the countdown timer. Enter `(( I += 10 ))` in the terminal to increment `I` by `10`. Note that you don't need to prepend variables with `$` inside these parenthesis.",
+          "hints": [
+            "Type `(( I += 10 ))` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "896",
+      "title": "echo $I",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "896.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "ed7724678c7a49033997c071bed6ee2ec78132a2"
+            ]
+          },
+          "content": "Use `echo` to print your `I` variable again.",
+          "hints": [
+            "Type `echo $I` in the terminal and press enter."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "897",
+      "title": "$(( I + 4 ))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "897.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "c896e1f65a1c1043997533b04a251db6fd71f3d0"
+            ]
+          },
+          "content": "It should have printed `11` for the value of `I`. Using the double parenthesis like you have been is good for changing variable values or making comparisons. It makes the calculation in place and provides no output. If you want to make a calculation and do something with the result, add a `$` in front like this: `$(( ... ))`. Type `$(( I + 4 ))` in the terminal to see what happens.",
+          "hints": [
+            "If it didn't print `11` for `I`, enter `I=11` to set it to `11`",
+            "Type `$(( I + 4 ))` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "899",
+      "title": "echo $(( I + 4 ))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "899.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "f4bcdfe25fe6643122f5c2f8dc7ce461ff0a635c"
+            ]
+          },
+          "content": "It should say, `bash: 15: command not found`. It replaced the command with the result of the calculation. Effectively, trying to run `15` as a command. Enter the same command, but put `echo` in front of it. The command was `$(( I + 4 ))`",
+          "hints": [
+            "Type `echo $(( I + 4 ))` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "902",
+      "title": "echo $I",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "902.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "e079f61f37cfffa7125344243b8afaca67dc3eaf"
+            ]
+          },
+          "content": "Again, it replaced the calculation with the result. So it was basically the same as if you entered `echo 15`. Use `echo` to print `I` to the screen again.",
+          "hints": [
+            "Type `echo $I` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "905",
+      "title": "J=$(( I - 6 ))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "905.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "1585768954a03006e8dfa1e8f58c4fb202dcf11c"
+            ]
+          },
+          "content": "It should still have printed `11` for `I`. See the hints if it didn't. These double parenthesis with a `$` are how you can assign a variable to some calculation. In the terminal, create a `J` variable, and use the `$(( ... ))` syntax to set its value to `I - 6`.",
+          "hints": [
+            "If it didn't print `11` for `I`, enter `I=11` to set it to `11`",
+            "Type `J=$(( I - 6 ))` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "908",
+      "title": "echo $J",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "908.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "6cc5d6838bea782b736cbae0ae31af17704699be"
+            ]
+          },
+          "content": "Use `echo` to print `J`.",
+          "hints": [
+            "Here's an example: `echo $<variable>`",
+            "Type `echo $J` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "911",
+      "title": "echo $(( J * 5 + 25 ))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "911.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "cf1643cfcef7584766b7946eac6b4ff657fb01c9"
+            ]
+          },
+          "content": "`J` should equal `5`. For some more practice, use `echo` to print the value `J * 5 + 25`.",
+          "hints": [
+            "Type `echo $(( J * 5 + 25 ))` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "912",
+      "title": "echo $J",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "912.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "2deead559e8cb44bd732cc89411515765f20c416"
+            ]
+          },
+          "content": "It should have printed `50`. Print `J` with `echo` again.",
+          "hints": [
+            "Here's an example: `echo $<variable>`",
+            "Type `echo $J` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "913",
+      "title": "declare -p",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "913.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "6a71afd33be81920ec53bd34eabaf49ab60f5cd9"
+            ]
+          },
+          "content": "So, as a reminder, `(( ... ))` will perform a calculation or operation and output nothing. `$(( ... ))` will replace the calculation with the result of it. You made a few variables in this shell, view them with `declare -p`.",
+          "hints": [
+            "Type `declare -p` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "914",
+      "title": "declare -p J",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "914.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "c34f84a83956d09aa43263741d19377c26d992af"
+            ]
+          },
+          "content": "`declare` can be used to create variables, but you are just going to use it to view them for now. If you scroll up a little, you should find your `I` and `J` variables in there. View `J` with `declare -p J`.",
+          "hints": [
+            "Type `declare -p J` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "916",
+      "title": "declare -p RANDOM",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "916.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "8f749ed393abde09092dc350b8bfe5ff1c486ef8"
+            ]
+          },
+          "content": "I saw `RANDOM` in that list, too. View it with `declare -p <variable>` like you did for `J`.",
+          "hints": [
+            "Type `declare -p RANDOM` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "918",
+      "title": "echo $(( RANDOM % 75 ))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "918.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "5134424a064cb6a69ee0ab7499e8ab16d0f2b35e"
+            ]
+          },
+          "content": "Okay, I think I finally know how to get the random number for the Bingo Number Generator. Use `echo` and `RANDOM % 75` to print a random number in the terminal.",
+          "hints": [
+            "Use the `$(( ... ))` syntax to calculate the random number",
+            "Here's an example: `echo $(( <calculation> ))`",
+            "Type `echo $(( RANDOM % 75 ))` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "920",
+      "title": "echo $(( RANDOM % 75 + 1 ))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "920.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "da97f0e1883c5104900a6504041b29dc5c7d7bc6"
+            ]
+          },
+          "content": "One tiny problem, that calculation will give a number between 0 and 74. Enter the same command in the terminal, but add `1` to the calculation to get a random number between 1 and 75.",
+          "hints": [
+            "Type `echo $(( RANDOM % 75 + 1 ))` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "928",
+      "title": "Set NUMBER=$(( RANDOM % 75 + 1))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "928.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "8ec3c9dbc3d1c39e8a28aa82955a0e7937600a4c"
+            ]
+          },
+          "content": "Back in your `bingo.sh` script, change the `NUMBER` variable so that it starts as a random number between 1 and 75 using the syntax you have been practicing.",
+          "hints": [
+            "Change the `NUMBER` variable to the result of the calculation `RANDOM % 75 + 1`",
+            "Use the `$(( ... ))` syntax to make the calculation",
+            "It should look like this: `NUMBER=$(( RANDOM % 75 + 1 ))`"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "930",
+      "title": "run ./bingo.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "930.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "4b9f589d3f7fd407704e30c23118f4c3fa3f6ecd"
+            ]
+          },
+          "content": "Run your script a few times in a row to make sure it's working.",
+          "hints": [
+            "Type `./bingo.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first",
+            "Run it at least two times in a row"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "940",
+      "title": "Add TEXT variable",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "940.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "3de64e66c183ba76ff3fdfd9989985ef89f0bbff"
+            ]
+          },
+          "content": "Next, create a `TEXT` variable and set the value to `\"The next number is, \"`. When the script is finished, the output will be something like `The next number is B:15`.",
+          "hints": [
+            "Make sure there's a space after the comma",
+            "Add `TEXT=\"The next number is, \"` to the `bingo.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "945",
+      "title": "help let",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "945.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "9c3dc72d2c625928502cc904e8b570e7334a7ab7"
+            ]
+          },
+          "content": "The letter that goes with the random number depends on what the number is. If it's 15 or less, it will be a `B`. I saw some comparisons in the `help let` menu, take a look at it again.",
+          "hints": [
+            "Type `help let` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "950",
+      "title": "Add first if <= 15",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "950.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "95df0dfebab1128cfad964eaf707a645bb9b97fc"
+            ]
+          },
+          "content": "You used the double square brackets with your `if` statement in the last program, but you can use the double parenthesis with these operators as well. In your script, create an `if` statement that uses double parenthesis for the condition. Check if the number variable is less than or equal to 15. If it is, use your two variables to print `The next number is, B:<number>`.",
+          "hints": [
+            "Make sure you only have two `echo` statements in your script, the title being one of them",
+            "Here's an example of how your `if` statement should look:\n```sh\nif (( CONDITION ))\nthen\n  STATEMENTS\nfi\n```",
+            "The condition you want is `(( NUMBER <= 15 ))`",
+            "In the statements area, use `echo` and your two variables to print `The next number is, B:<number>`",
+            "The statements area should look like this: `echo $TEXT B:$NUMBER`",
+            "The whole `if` statement should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nfi\n```"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "960",
+      "title": "Add elif -le 30",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "960.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "f16aa4462ca66e6d5aa3497d6762942f713a0536"
+            ]
+          },
+          "content": "`if` statements can have an \"else if\" area like this:\n```sh\nif (( CONDITION ))\nthen\n  STATEMENTS\nelif [[ CONDITION ]]\nthen\n  STATEMENTS\nfi\n```\n\nUsing the double square brackets this time, add an `elif` condition that checks if the number variable is less than or equal to `30`. If it is, use your two variables again to print `The next number is, I:<number>`",
+          "hints": [
+            "View the `help test` menu to see the operators you can use with the double square brackets",
+            "The condition you want is `[[ $NUMBER -le 30 ]]`. Don't forget the `$`",
+            "In the statements area, use `echo` and your two variables to print `The next number is, I:<number>`",
+            "The statements area should look like this: `echo $TEXT I:$NUMBER`",
+            "The `elif` area should look like this:\n```sh\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nfi\n```",
+            "The whole `if` statement should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nfi\n```"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "970",
+      "title": "Add elif < 46",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "970.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "b4166345c91dd10c40a5e75cd3cca464af048997"
+            ]
+          },
+          "content": "You can add as many `elif` sections to an `if` statement as you want. Add another `elif`, below the last, one that uses the double parenthesis to check if the number variable is less than 46. If it is, use your two variables to print `The next number is, N:<number>`",
+          "hints": [
+            "View the `help let` menu to see the operators you can use with the double parenthesis",
+            "The operator you want it `<`",
+            "You can add another `elif` like this:\n```sh\nif CONDITION\nthen\n  STATEMENTS\nelif CONDITION\nthen\n  STATEMENTS\nelif CONDITION\nthen\n  STATEMENTS\nfi\n```",
+            "The condition you want is `(( NUMBER < 46 ))`",
+            "In the statements area, use `echo` and your two variables to print `The next number is, N:<number>`",
+            "The statements area should look like this: `echo $TEXT N:$NUMBER`",
+            "This `elif` area should look like this:\n```sh\nelif (( NUMBER < 46 ))\nthen\n  echo $TEXT N:$NUMBER\nfi\n```",
+            "The whole `if` statement should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nelif (( NUMBER < 46 ))\nthen\n  echo $TEXT N:$NUMBER\nfi\n```"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "980",
+      "title": "Add elif -lt 61",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "980.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "64e1814522ff7e16b98e71a2f25065b092ae6277"
+            ]
+          },
+          "content": "Run your script if you want to see the output. It should print one of the sentences if the random number is less than 46. It may take a couple tries. Add another `elif`, below the last one, that uses double square brackets to check if the number variable is less than 61. If it is, use your two variables to print `The next number is, G:<number>`",
+          "hints": [
+            "View the `help test` menu to see the operators you can use with the double square brackets",
+            "The operator you want it `-lt`",
+            "The condition you want is `[[ $NUMBER -lt 61 ]]`. Don't forget the `$`",
+            "The statements area should look like this: `echo $TEXT G:$NUMBER`",
+            "This `elif` area should look like this:\n```sh\nelif [[ $NUMBER -lt 61 ]]\nthen\n  echo $TEXT G:$NUMBER\nfi\n```",
+            "The whole `if` statement should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nelif (( NUMBER < 46 ))\nthen\n  echo $TEXT N:$NUMBER\nelif [[ $NUMBER -lt 61 ]]\nthen\n  echo $TEXT G:$NUMBER\nfi\n```"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "990",
+      "title": "Add else",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "990.1",
+          "setup": {
+            "watchers": [
+              "./bingo.sh"
+            ],
+            "commits": [
+              "dae11871e995ca83f1855dc55651983a4d597321"
+            ]
+          },
+          "content": "One more case to handle. Add an `else` at the bottom of the `if` that uses your two variables to print `The next number is, O:<number>`.",
+          "hints": [
+            "View the `if/else` in your `countdown.sh` file to see how you did it before",
+            "You don't need a condition or the `then` on this one",
+            "Here's an example:\n```sh\nif CONDITION\nthen\n  STATEMENTS\nelif CONDITION\nthen\n  STATEMENTS\n...\nelse\n  STATEMENTS\nfi\n```",
+            "The `else` area should look like this:\n```sh\nelse\n  echo $TEXT O:$NUMBER\n```",
+            "The whole `if` should look like this:\n```sh\nif (( NUMBER <= 15 ))\nthen\n  echo $TEXT B:$NUMBER\nelif [[ $NUMBER -le 30 ]]\nthen\n  echo $TEXT I:$NUMBER\nelif (( NUMBER < 46 ))\nthen\n  echo $TEXT N:$NUMBER\nelif [[ $NUMBER -lt 61 ]]\nthen\n  echo $TEXT G:$NUMBER\nelse\n  echo $TEXT O:$NUMBER\nfi\n```"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1000",
+      "title": "./bingo.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1000.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "2c986eb511c51c43532bf7780a6ef850fc9720e7"
+            ]
+          },
+          "content": "Run your script a few times and make sure it's working.",
+          "hints": [
+            "Type `./bingo.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first",
+            "Run it at least two times in a row"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1010",
+      "title": "touch fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1010.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "ea544a2b1e68030e7f2c1d388ac1dde57a8d94bc"
+            ]
+          },
+          "content": "I think the generator is done :smile: The next project is a fortune teller. Use the `touch` command to create `fortune.sh` in the same folder as the other scripts.",
+          "hints": [
+            "Type `touch fortune.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1020",
+      "title": "chmod +x fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1020.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "d7db462a28f08be7ac0535925048a482d58fb66a"
+            ]
+          },
+          "content": "Give your file executable permissions.",
+          "hints": [
+            "Use the `chmod` command with the `+x` flag",
+            "Here's an example `chmod <permissions> <filename>`",
+            "You previously used `chmod +x bingo.sh`",
+            "Type `chmod +x fortune.sh` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1030",
+      "title": "Add shebang",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1030.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "5594a1813efb2c10c1b0e3d0d6a0e93a761af1db"
+            ]
+          },
+          "content": "Add a `shebang` at the top of your new file that uses `bash` again.",
+          "hints": [
+            "A `shebang` looks like this: `#!<path_to_interpreter>`",
+            "Enter `which bash` in the terminal to see the path to `bash`",
+            "Look at the `shebang` in one of your other scripts to get the syntax",
+            "It should look like this: `#!/bin/bash`",
+            "Add `#!/bin/bash` at the top of your `fortune.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1040",
+      "title": "Add comment",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1040.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "77515c832bd85e4bd9e9d4d728fff1b5b7cd1ff1"
+            ]
+          },
+          "content": "Add comment `Program to tell a persons fortune`",
+          "hints": [
+            "Comments look like this: `# <comment>`",
+            "Add `#Program to tell a persons fortune` below the `shebang`",
+            "Capitalization matters"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1050",
+      "title": "Add echo \"title\"",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1050.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "6951b5d0829374ac88704255d3ebf90c2f13cf21"
+            ]
+          },
+          "content": "Add a title for this one like the others. This one should say `~~ Fortune Teller ~~`. Don't forget the empty line before and after it.",
+          "hints": [
+            "Print the whole title and the empty lines with a single `echo` command",
+            "Use the `echo` command with the `-e` flag and the new line (`\\n`) character",
+            "Don't forget to put it in double quotes",
+            "Take a look at one of the title's from a previous file for a hint",
+            "Here's an example: `echo -e \"\\n<message>\\n\"`",
+            "You previously used `echo -e \"\\n~~ Bingo Number Generator ~~\\n\"`",
+            "Add `echo -e \"\\n~~ Fortune Teller ~~\\n\"` below the comment of your `fortune.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1060",
+      "title": "./fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1060.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "0a8db77375a7013e15c916a9db9575afc2c30c5c"
+            ]
+          },
+          "content": "Run the file once to make sure it's working.",
+          "hints": [
+            "Type `./fortune.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1070",
+      "title": "ARR=(\"a\" \"b\" \"c\")",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1070.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "623ed42d5371694d5d0ba8603c21879616ea4a75"
+            ]
+          },
+          "content": "This program will have an array of responses. One will be printed randomly after a user inputs a question. Practice first :smile: In the terminal, create an array like this: `ARR=(\"a\" \"b\" \"c\")`",
+          "hints": [
+            "Type the suggested command in the terminal",
+            "Type `ARR=(\"a\" \"b\" \"c\")` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1080",
+      "title": "echo ${ARR[1]}",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1080.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "f453da591e72f940c065a6d08a08df5adadc8bd7"
+            ]
+          },
+          "content": "Each variable in the array is like any other variable, just combined into a single variable. In the terminal, print the second item in the array with `echo ${ARR[1]}`. Note that the first item would be index zero.",
+          "hints": [
+            "Type `echo ${ARR[1]}` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1090",
+      "title": "echo ${ARR[@]}",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1090.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "ecccc60a74c8adfd577fe37ad9da3bc3b35be18d"
+            ]
+          },
+          "content": "If you recall, you were able to print all the arguments to your `countdown.sh` script with `echo $*`. `echo $@` would have worked as well. Similarly, you can use the `*` or `@` to print your whole array. In the terminal, use `echo` to print all the items in your array.",
+          "hints": [
+            "Here's an example `echo ${ARR[<index>]}`",
+            "Type `echo ${ARR[@]}` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1100",
+      "title": "declare -p ARR",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1100.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "0efbb3d3c7480a490818f7645695cffe66e501c4"
+            ]
+          },
+          "content": "The variable must be in that `declare` list. View your array variable using the `declare` command and the `-p` flag.",
+          "hints": [
+            "Here's an example: `declare -p <variable>`",
+            "Type `declare -p ARR` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1110",
+      "title": "Add RESPONSES array",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1110.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "1dda61c8b704603d8a5b4eea2f49e296c9fe0d8b"
+            ]
+          },
+          "content": "The `-a` next to it stands for `array`. In your script, create an array named `RESPONSES`. Give it these six values: `Yes`, `No`, `Maybe`, `Outlook good`, `Don't count on it`, and `Ask again later`.",
+          "hints": [
+            "Here's an example: `VARIABLE=(value value ...)`",
+            "Make sure any values with spaces are in proper quotes",
+            "You created your other array with `ARR=(\"a\" \"b\" \"c\")`",
+            "Add `RESPONSES=(\"Yes\" \"No\" \"Maybe\" \"Outlook good\" \"Don't count on it\" \"Ask again later\")` in your script"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1120",
+      "title": "echo ${RESPONSES[5]}",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1120.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "a3b1013e7d8e02f2cbe242ae89b7188a742612a3"
+            ]
+          },
+          "content": "In your script, use `echo` to print the last item in the array.",
+          "hints": [
+            "Here's an example `echo ${ARR[<index>]}`",
+            "Remember that the first item starts at zero",
+            "Add `echo ${RESPONSES[5]}` to your `fortune.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1130",
+      "title": "./fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1130.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "d7de1925b419877fa9437c7dcc5d75b9d230b3cb"
+            ]
+          },
+          "content": "Run it to see the output.",
+          "hints": [
+            "Type `./fortune.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1140",
+      "title": "Add N=$(( RANDOM % 6 ))",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1140.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "b683256070e75446442d0afdefe0349cb257d1f6"
+            ]
+          },
+          "content": "You will randomly print one of the values. In your script, create a variable named `N`. Set it equal to a random number between `0` and `5`, the first and last index of the array.",
+          "hints": [
+            "Use the modulus (`%`) operator and `6` to get a number between `0` and `5`",
+            "Look at the random number you created in the `bingo.sh` file for a hint",
+            "Here's an example: `VARIABLE=$(( <calculation> ))`",
+            "Calculate a random number in the range you want with `RANDOM % 6`",
+            "Add `N=$(( RANDOM % 6 ))` to the script"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1150",
+      "title": "Change to echo ${RESPONSES[$N]}",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1150.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "1fd559d54ea22ed048bddcd0fbacb7e8e128e0f3"
+            ]
+          },
+          "content": "Change your `echo` command to print the item in the array whose index is the random number you generated.",
+          "hints": [
+            "Use your `$N` variable as the index where you print an item from the array",
+            "Don't forget that scripts run from top to bottom, so you can't use any variables before they are created",
+            "Change the `echo` line to `echo ${RESPONSES[$N]}`"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1160",
+      "title": "help",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1160.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "d4e94be608b78fa47cd1e1814559feb6c1c4ffed"
+            ]
+          },
+          "content": "You will create a function to generate an answer. Check the `help` menu to see if you can find anything.",
+          "hints": [
+            "Enter the suggested command in the terminal",
+            "Type `help` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1170",
+      "title": "help function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1170.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "be87549563c4f1e5ea966faa38530ae1777a0d69"
+            ]
+          },
+          "content": "See any that might help? There's one that says `function`. See if you can find out more about it.",
+          "hints": [
+            "Use the `help` command to find out more",
+            "Here's an example: `help <command>`",
+            "Type `help function` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1180",
+      "title": "Add GET_FORTUNE function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1180.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "b316e208aa6e0df6d77129b17ab3316feae04824"
+            ]
+          },
+          "content": "It looks like you can create a function like this:\n\n```sh\nFUNCTION_NAME() {\n  STATEMENTS\n}\n```\n\nAdd an empty function named `GET_FORTUNE` to your script. Make sure the response you are printing is the last thing in the script.",
+          "hints": [
+            "Add this to your script:\n```sh\nGET_FORTUNE() {}\n```",
+            "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1190",
+      "title": "Add echo Ask a yes or no question",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1190.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "6c03b37bfc570c024021c23063aa4ef6d75546d7"
+            ]
+          },
+          "content": "In your function, use `echo` to print `Ask a yes or no question:`",
+          "hints": [
+            "Your function should look like this:\n```sh\nGET_FORTUNE() {\n  echo Ask a yes or no question:\n}\n```",
+            "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1200",
+      "title": "Add GET_FORTUNE function call",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1200.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "3f1f7241dc0c31862b81378d7a5cfa181888b493"
+            ]
+          },
+          "content": "Call your function by putting the name of it below where you create it. No `$` needed. Make sure the response you are printing is at the bottom of the file.",
+          "hints": [
+            "Add `GET_FORTUNE` below where you create your function to call it",
+            "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1210",
+      "title": "./fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1210.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "e420d6391ab95417d69218db7f4ecdaafc134a56"
+            ]
+          },
+          "content": "Run your script to make sure it's working.",
+          "hints": [
+            "Type `./fortune.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1220",
+      "title": "Add read QUESTION",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1220.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "94d94c79258678006b173a52913ab43cea4e9a0f"
+            ]
+          },
+          "content": "In your function after you print the sentence, use `read` to get user input into a variable named `QUESTION`.",
+          "hints": [
+            "Add `read QUESTION` to your function below the `echo`",
+            "Your function should look like this:\n```sh\nGET_FORTUNE() {\n  echo Ask a yes or no question:\n  read QUESTION\n}\n```",
+            "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1230",
+      "title": "./fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1230.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "8636c61453e2c63e501e0c8c7e6a526b15c7da11"
+            ]
+          },
+          "content": "Run the script again to test it out. Enter a question when it asks.",
+          "hints": [
+            "Type `./fortune.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1240",
+      "title": "help",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1240.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "b22ac4a5cdc58fcfbd4d4ffbf0462072493a1825"
+            ]
+          },
+          "content": "I want to make sure the input is a question. You are going to add a loop that asks for input until the input ends with a question mark. View the `help` menu to see if you can find an appropriate loop.",
+          "hints": [
+            "Type `help` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1250",
+      "title": "help until",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1250.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "265f1df44734c6f7b489d8bf54fac2acb1470aa6"
+            ]
+          },
+          "content": "View more about that `until` command. That might be the one to use here.",
+          "hints": [
+            "Use `help <command>` to view more about a command",
+            "Type `help until` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1260",
+      "title": "Add until loop",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1260.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "b7a1a25197f0dcab9f4cbcd0cea860bb725511fb"
+            ]
+          },
+          "content": "The `until` loop is very similar to the `while` loop you used. It will execute the loop until a condition is met. Here's an example:\n\n```sh\nuntil [[ CONDITION ]]\ndo\n  STATEMENTS\ndone\n```\n\nAdd an `until` loop below your function. Use the double brackets to check if `QUESTION` is equal to `test?`. Move the `GET_FORTUNE` function call to the statements area of the loop. It should run the function until you input `test?` as the question.",
+          "hints": [
+            "View the `help [[` or `help test` menu to see if you can find the operator to use",
+            "You want the `==` operator",
+            "The condition should look like this: `[[ $QUESTION == test? ]]`",
+            "Your `until` loop should look like this:\n```sh\nuntil [[ $QUESTION == test? ]]\ndo\n  GET_FORTUNE\ndone\n```",
+            "You should only call the `GET_FORTUNE` function once",
+            "Your `echo ${RESPONSES[$N]}` command should be at the bottom of the file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1270",
+      "title": "./fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1270.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "8d0d909bde054312f6066aea2e2fc7de747bb7c7"
+            ]
+          },
+          "content": "Run the script and enter something other than `test?`. Then enter `test?` after it asks for a question the second time.",
+          "hints": [
+            "Type `./fortune.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1280",
+      "title": "help [[ expression ]]",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1280.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "bfb64b6385a81ee408b29f19adb6bd91fe8a1954"
+            ]
+          },
+          "content": "View that `help [[ expression ]]` menu again. You need to find out how to test if the input ends with a question mark (`?`).",
+          "hints": [
+            "Type `help [[` or `help [[ expression ]]` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1290",
+      "title": "[[ hello == hello ]]; echo $?",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1290.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "17977bd8b2d9397bb01547bfcb6dbbe5708799ae"
+            ]
+          },
+          "content": "Let's play with these again. You can test if two strings are the same with `==`. In the terminal, use the `[[ ... ]]; echo $?` syntax you used before to test if `hello` is equal to `hello`.",
+          "hints": [
+            "Be sure to use the `==` operator",
+            "Type `[[ hello == hello ]]; echo $?` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1300",
+      "title": "[[ hello == world ]]; echo $?",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1300.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "96a94a93b8358753f191daa89b335f545a3cb838"
+            ]
+          },
+          "content": "Exit status of `0`, it was true. Using the same syntax, test if `hello` is equal to `world`.",
+          "hints": [
+            "Use the `[[ ... ]]; echo $?` syntax",
+            "Be sure to use the `==` operator",
+            "Type `[[ hello == world ]]; echo $?` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1310",
+      "title": "[[ hello =~ el ]]; echo $?",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1310.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "df02e2e7b008ca5bd0fd4bb0aac2abd0d667a9f8"
+            ]
+          },
+          "content": "False. An important operator in that menu is `=~`. It allows for pattern matching. Using the same syntax but with this operator, check if `hello` contains the pattern `el`.",
+          "hints": [
+            "Use the `[[ ... ]]; echo $?` syntax",
+            "Use the `=~` operator with it",
+            "Type `[[ hello =~ el ]]; echo $?` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1320",
+      "title": "[[ \"hello world\" =~ \"lo wor\" ]]; echo $?",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1320.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "3c4569cd60ecc23bbda675a4e4ef7ea9b87d173d"
+            ]
+          },
+          "content": "True. The condition was checking for `el` within the word `hello`. Using the same syntax, check if `hello world` contains the pattern `lo wor`. You will need to put them both in quotes so it recognizes the spaces.",
+          "hints": [
+            "Use the `[[ ... ]]; echo $?` syntax",
+            "Use the `=~` operator with it",
+            "Type `[[ \"hello world\" =~ \"lo wor\" ]]; echo $?` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1330",
+      "title": "[[ \"hello world\" =~ ^h ]]; echo $?",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1330.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "a319dd1fe827121bbf17c95b621b2b8c7c3532fc"
+            ]
+          },
+          "content": "Your patterns have been checking for literal matches, `el` and `lo wor`. You can use regular expression characters as well, but you can't put the pattern in quotes when you do. Using the same syntax, check if `hello world` starts with an `h` by using `^h` as the pattern.",
+          "hints": [
+            "Make sure not to use quotes around the pattern when using regex characters it",
+            "Type `[[ \"hello world\" =~ ^h ]]; echo $?` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1340",
+      "title": "[[ \"hello world\" =~ ^h.+d$ ]]; echo $?",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1340.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "746b06a16e9833003f83b02787c1762e8e6ba4be"
+            ]
+          },
+          "content": "Do it again, but use `^h.+d$` as the pattern to see if the string starts with an `h`, has at least one character after it, and ends with a `d`.",
+          "hints": [
+            "Use the `[[ ... ]]; echo $?` syntax again",
+            "Check if `hello world` contains the suggested pattern",
+            "Make sure not to use quotes around the pattern when using regex characters it",
+            "Type `[[ \"hello world\" =~ ^h.+d$ ]]; echo $?` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1350",
+      "title": "VAR=\"hello world\"",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1350.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "dff21c36f05edbbed439977157439e7b4b9b9de1"
+            ]
+          },
+          "content": "In the terminal, create a variable named `VAR` that equals `hello world`.",
+          "hints": [
+            "Type `VAR=\"hello world\"` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1360",
+      "title": "echo $VAR",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1360.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "3aad4db218f986446ba0e8c82bc0e0a51cca1293"
+            ]
+          },
+          "content": "Use `echo` to print the variable you just created.",
+          "hints": [
+            "Type `echo $VAR` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1370",
+      "title": "[[ $VAR == \"hello world\" ]]; echo $?",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1370.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "56d83d0cd5b3bbf84ebb730e247b40ebf28da3dc"
+            ]
+          },
+          "content": "Using the `[[ ... ]]; echo $?` syntax, check if your variable is equal to `hello world`.",
+          "hints": [
+            "Check the `help [[` menu to find the operator to use",
+            "It's the `==` operator",
+            "You want to check if `$VAR == \"hello world\"`",
+            "Type `[[ $VAR == \"hello world\" ]]; echo $?` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1380",
+      "title": "[[ $VAR =~ \\?$ ]; echo $?",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1380.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "a6d2312d8d9cb702ba7edbff045f5a2efb11ad13"
+            ]
+          },
+          "content": "Using the same syntax, check if your variable ends with `?` by using the pattern `\\?$`.",
+          "hints": [
+            "Be sure to use the pattern matching operator",
+            "It's the `=~` operator",
+            "You want to check if `$VAR =~ \\?$`",
+            "Type `[[ $VAR =~ \\?$ ]]; echo $?` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1385",
+      "title": "[[ test? =~ \\?$ ]; echo $?",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1385.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "7ba9227d7503ec7a09d60c89ba003e140bba4150"
+            ]
+          },
+          "content": "It doesn't end with `?`. Just to make sure I don't have the pattern wrong, check if `test?` ends with `?`.",
+          "hints": [
+            "Use the same `[[ ... ]]; echo $?` syntax you have been using",
+            "Use the `\\?$` pattern to see if a string ends with `?`",
+            "Make sure you're using the pattern matching operator `=~`",
+            "You want to check if `test? =~ \\?$`",
+            "Type `[[ test? =~ \\?$ ]]; echo $?` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1390",
+      "title": "Change until condition",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1390.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "2343279c3ec7a75dcba124b8ed351d3b847dbe74"
+            ]
+          },
+          "content": "I think that will work. Back in your script, change the `until` condition to see if your variable ends with `?`.",
+          "hints": [
+            "Use the pattern matching operator with `\\?$`",
+            "It's the `=~` operator",
+            "Your condition should look like this: `[[ $QUESTION =~ \\?$ ]]`",
+            "Make sure there's spaces inside the brackets and around the operator"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1400",
+      "title": "./fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1400.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "223ecb2c295fa1644e71ead61109f23f2237b074"
+            ]
+          },
+          "content": "Run the script and input something that doesn't end with `?` the first time, then something that does the second.",
+          "hints": [
+            "Type `./fortune.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1410",
+      "title": "Add if to GET_FORTUNE",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1410.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "ee7edd971227a17b9068f8700734ef4c07e7e315"
+            ]
+          },
+          "content": "I know that it asks the same thing if the input isn't what you want. You should let users know that it needs to end with `?`. Add an `if` condition in your **function** that checks `if [[ ! $1 ]]`. Put the existing `echo` statement in the `then` area and make sure the existing `read` is below the whole `if` condition.",
+          "hints": [
+            "Here's an example:\n```sh\nif [[ CONDITION ]]\nthen\n  STATEMENTS\nfi\n\nread QUESTION\n```",
+            "Your function should look like this:\n```sh\nfunction GET_FORTUNE() {\n  if [[ ! $1 ]]\n  then\n    echo Ask a yes or no question:\n  fi\n\n  read QUESTION\n}\n```"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1412",
+      "title": "Add else to if [[ ! $1 ]]",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1412.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "0071ab68833e7b96f1c350db04505025790e34d6"
+            ]
+          },
+          "content": "You can pass arguments to functions like you did with your script. This condition will check if one isn't passed and print the sentence. Add an `else` to your `if`. Use `echo` to print `Try again. Make sure it ends with a question mark:` if the condition fails.",
+          "hints": [
+            "Here's an example:\n```sh\nif [[ CONDITION ]]\nthen\n  STATEMENTS\nelse\n  STATEMENTS\nfi\n```",
+            "Your `if` condition should look like this:\n```sh\nif [[ ! $1 ]]\nthen\n  echo Ask a yes or no question:\nelse\n  echo Try again. Make sure it ends with a question mark:\nfi\n```"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1413",
+      "title": "Add argument to function call",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1413.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "d4451ac2176dbd9ac0041cde537fcdd5c3697e55"
+            ]
+          },
+          "content": "Now, your function will print one thing if you pass it any argument, and something else if not. In the `until` loop, add `again` as an argument to where you call the function.",
+          "hints": [
+            "Here's an example: `FUNCTION_NAME argument`",
+            "Your function call should look like this: `GET_FORTUNE again`",
+            "Your `until` loop should look like this:\n```sh\nuntil [[ $QUESTION =~ \\?$ ]]\ndo\n  GET_FORTUNE again\ndone\n```"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1416",
+      "title": "Add Initial function call",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1416.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "68be1c2dcd6ee9b36abe4c7ca94376a1b9eb2de0"
+            ]
+          },
+          "content": "Now, each time the function is called in the `until` loop, it will pass `again` as an argument and print the `Try again...` sentence. Before your `until` loop, call the function without an argument so the first time it runs, it prints the initial sentence.",
+          "hints": [
+            "Add `GET_FORTUNE` before the `until` loop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1420",
+      "title": "./fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1420.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "c6d9d2bc9865306125f5d98660f7035cec5aee30"
+            ]
+          },
+          "content": "Run the script and enter something without a question mark when it asks the first time. Use a question mark the second time.",
+          "hints": [
+            "Type `./fortune.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1425",
+      "title": "Add line break in front of response",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1425.1",
+          "setup": {
+            "watchers": [
+              "./fortune.sh"
+            ],
+            "commits": [
+              "321e2cd4502df41267ecbb33c05ceea0644eab14"
+            ]
+          },
+          "content": "Awesome. One last thing. Add an empty line in front of where you print the response.",
+          "hints": [
+            "Change the existing `echo ${RESPONSES[$N]}` line",
+            "Use the `-e` flag and the new line (`\\n`) character with the `echo` statement",
+            "Make sure to use quotes so it prints the new line",
+            "Run the script and see if it's working",
+            "The suggested command should look like this: `echo -e \"\\n${RESPONSES[$N]}\"`"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1428",
+      "title": "./fortune.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1428.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "ba710bb0a33b2ca85225a0f33505c8ab68a8d2f6"
+            ]
+          },
+          "content": "Run the script one more time to see if you like the output.",
+          "hints": [
+            "Type `./fortune.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1430",
+      "title": "touch five.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1430.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "baed26b4a883e347ac934ee6c7f17544c0864525"
+            ]
+          },
+          "content": "Excellent. One last program to make. Use `touch` to create a new file named `five.sh` in the same folder as the others.",
+          "hints": [
+            "Type `touch five.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1440",
+      "title": "chmod +x five.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1440.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "8871c76ade36df20b70b54dd445a704f375cbce2"
+            ]
+          },
+          "content": "Give your file executable permissions.",
+          "hints": [
+            "Use the `chmod` command with the `+x` flag",
+            "Here's an example `chmod <permissions> <filename>`",
+            "You previously used `chmod +x fortune.sh`",
+            "Type `chmod +x five.sh` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1450",
+      "title": "Add shebang",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1450.1",
+          "setup": {
+            "watchers": [
+              "./five.sh"
+            ],
+            "commits": [
+              "76dae6454fe94897680bbff107cbaad866f963bc"
+            ]
+          },
+          "content": "Add a `shebang` to the new script that uses `bash` like the others.",
+          "hints": [
+            "A `shebang` looks like this: `#!<path_to_interpreter>`",
+            "Enter `which bash` in the terminal to see the path to `bash`",
+            "Look at the `shebang` in one of your other scripts to get the syntax",
+            "It should look like this: `#!/bin/bash`",
+            "Add `#!/bin/bash` at the top of your `five.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1460",
+      "title": "Add comment",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1460.1",
+          "setup": {
+            "watchers": [
+              "./five.sh"
+            ],
+            "commits": [
+              "ed6462b82c4e4857a441ff230fb520cf6fd367ec"
+            ]
+          },
+          "content": "Add a comment below the `shebang` that says, `Program to run my other four programs`",
+          "hints": [
+            "Comments look like this: `# <comment>`",
+            "Add `# Program to run my other four programs` below the `shebang`",
+            "Capitalization matters"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1470",
+      "title": "Add ./questionnaire.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1470.1",
+          "setup": {
+            "watchers": [
+              "./five.sh"
+            ],
+            "commits": [
+              "5cb8417efa55f29ea4a88db08a62aa452414dd5c"
+            ]
+          },
+          "content": "This program will run all the programs you made so far consecutively. Add the command to run the `questionnaire.sh` file.",
+          "hints": [
+            "The command should look like how you would execute the file in the terminal",
+            "Add `./questionnaire.sh` to the `five.sh` file"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1480",
+      "title": "./five",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1480.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "7808757cbf8c839ffbf545b0c8c53a7346dbc430"
+            ]
+          },
+          "content": "Run the file to see if it works. Enter input when it asks.",
+          "hints": [
+            "Type `./five.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1490",
+      "title": "Add the rest of the scripts",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1490.1",
+          "setup": {
+            "watchers": [
+              "./five.sh"
+            ],
+            "commits": [
+              "93c0f33a84976ec749d885888238cd10fcacd780"
+            ]
+          },
+          "content": "Add commands to run the rest of your scripts in the file. They should be in this order: `questionnaire`, `countdown`, `bingo`, and `fortune`. Don't forget that your `countdown.sh` file needs an argument, so put a `3` next to it.",
+          "hints": [
+            "Your `five.sh` file should have these commands:\n```sh\n./questionnaire.sh\n./countdown.sh 3\n./bingo.sh\n./fortune.sh\n```"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1500",
+      "title": "Clear",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1500.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "efbac3d83741d715eb42acf2d206e0403aa7747a"
+            ]
+          },
+          "content": "Okay, use `clear` to empty out what's in the terminal before the big moment.",
+          "hints": [
+            "Type `clear` in the terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1510",
+      "title": "./five",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1510.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "c556437c2d0ca56f18a25665e08c42470fe7085d"
+            ]
+          },
+          "content": "Run the script and enter input when it asks.",
+          "hints": [
+            "Type `./five.sh` in the terminal and press enter",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1520",
+      "title": "help",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1520.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "451a36c1fbdafd67667eb5b0850cd753aafb2a97"
+            ]
+          },
+          "content": "Cool. I think all the scripts are done. View the `help` menu again I want to explore one more thing.",
+          "hints": [
+            "Type `help` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1530",
+      "title": "help type",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1530.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "8988a3838299205c0665abb22211bc8d8786aa23"
+            ]
+          },
+          "content": "View more about that `type` command.",
+          "hints": [
+            "Use `help <command>` to find out more about a command",
+            "Type `help type` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1540",
+      "title": "type echo",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1540.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "604a60ba7980cb2f93568d3de644a1c0de636f5b"
+            ]
+          },
+          "content": "It says you can view the type of a command with `type <command>`. Just for fun, lets take a look at the type of a few different commands. View the type of `echo`.",
+          "hints": [
+            "Type `type echo` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1550",
+      "title": "type read",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1550.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "20fa9b569a294026c52646f84a0f25270ecc787e"
+            ]
+          },
+          "content": "View the type of the `read` command.",
+          "hints": [
+            "Type `type read` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1560",
+      "title": "type if",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1560.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "34f8e822b8025e76dfdbd64788ff5da455b168a5"
+            ]
+          },
+          "content": "View the type of `if`",
+          "hints": [
+            "Type `type if` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1570",
+      "title": "type then",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1570.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "d12c2252d5e0506566ac3503de07aba967a6e0fa"
+            ]
+          },
+          "content": "View the type of `then`",
+          "hints": [
+            "Type `type then` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1580",
+      "title": "type bash",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1580.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "285cfb6da0f2510182e5918256d24b9018c1ffcb"
+            ]
+          },
+          "content": "Those were all from the `help` menu and described as a `shell builtin` or `shell keyword`. View the type of `bash`",
+          "hints": [
+            "Type `type bash` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1590",
+      "title": "type psql",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1590.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "9e02dce8eeebb72c78e176dbf02d538a266f92b0"
+            ]
+          },
+          "content": "That's the location of the `bash` command. View the type of `psql`.",
+          "hints": [
+            "Type `type psql` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1600",
+      "title": "type ./five.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1600.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "bdc65c71bbc2af49555377e473b685e3a698d688"
+            ]
+          },
+          "content": "It's showing the location of the commands. View the type of your `./five.sh` file.",
+          "hints": [
+            "Type `type ./five.sh` in the terminal and press enter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1610",
+      "title": "exit",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1610.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "770f22a7f8ffd6fb35af172fdb698d209b3c894c"
+            ]
+          },
+          "content": "Last step, close the terminal with the `exit` command. Thanks and happy coding!",
+          "hints": [
+            "Type `exit` in the terminal and press enter"
+          ]
+        }
+      ]
+    }
+  ]
+}
