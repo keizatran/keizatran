@@ -1,14 +1,14 @@
-👋 **Here's a little bit about me:**
+👋 **Here's a bit about me:**
 
-- ✨ Hi, I'm currently a data-learner, I'd love to know more about this field.
+- ✨ Hi, I'm a data learner and worker, and I'd love to know more about this field.
 - 💻 On my path of being a **(Senior) Data Engineer, Analytics Engineer**.
 - 🌍 Based in Ho Chi Minh City, Vietnam.
 - 💼 Previously had experience working as a Data Analyst & Business Intelligence.
 - 🏢 Mostly code in **SQL, Python, Linux bash** and familiar with ELT toolkits: **dbt, Dagster, Airflow** along with BI Tools like **PBI, Data Studio, Superset**.
-- ⚙️ My favorite responsibility: to organize and setup data system for your company.
+- ⚙️ My favorite responsibility: is to organize and set up data systems for your company.
 - 💐 There will be lots of obstacles to face. But we can do it!
 - 📫 Find me on: [LinkedIn](https://www.linkedin.com/in/hukieetr/) · [Certifications](https://bit.ly/KhoaTranHungPortfolio) · [Personal Web (TBU)](null)
-- 📑 [**RECRUITMENT ONLY**] Ping me if you're interested in my resumé: [Email](mailto:danieltran79.work@gmail.com)
+- 📑 [**RECRUITMENT ONLY**] Ping me if you're interested in my resumé: [Email](mailto:khoatrandata.work@gmail.com)
 
 > Quote of the day: **"I'm just trying to be better every day"**
 
