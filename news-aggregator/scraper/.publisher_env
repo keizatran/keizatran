@@ -1,0 +1,8 @@
+PROJECT_ID = "news-aggregator-1234"
+DATASET = "raw_data"
+
+# Engadget
+ENGADGET_TABLE_NAME = "raw__engadget"
+GOOGLE9TO5_TABLE_NAME = "raw__9to5google"
+MAC9TO5_TABLE_NAME = "raw__9to5mac"
+TECHCRUNCH_TABLE_NAME = "raw__techcrunch"
