@@ -4,4 +4,8 @@ logs/dbt*
 .env
 __pycache__
 requirements.txt
-*test*.py
+test*.py
+*.lock
+*.toml
+freeCodeCamp/*/*/examples/*
+*.json
