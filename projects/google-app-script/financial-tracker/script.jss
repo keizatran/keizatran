@@ -135,3 +135,21 @@ function clearUnboldCells() {
 
   Logger.log("Clearing of unbold cells completed.");
 }
+
+/**
+ * @customfunction
+ */
+
+function GENERATE_SHA_UUID(inputArray) {
+  return inputArray.map((row) => {
+    if (row === "") return ""; // Skip empty rows
+    // Ensure the row is treated as a string, and convert it to a byte array
+    const byteArray = Utilities.newBlob(row.toString()).getBytes();
+    const hash = Utilities.computeDigest(
+      Utilities.DigestAlgorithm.MD5,
+      byteArray
+    );
+    // Convert the byte array to a hexadecimal string
+    return hash.map((e) => ("0" + (e & 0xff).toString(16)).slice(-2)).join("");
+  });
+}
